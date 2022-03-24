@@ -1,0 +1,497 @@
+/* Main content */
+
+body {
+  background-color: #f3f3f3;
+  color: #0a3641;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+main,
+body {
+  text-align: center;
+}
+
+h1 {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 3.5em;
+  color: #dd4b00;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #dd4b00;
+  padding-top: 10px;
+}
+
+h3 {
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+span {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0a3641;
+}
+
+#current {
+  color: #f3f3f3af;
+}
+
+.cta-button {
+  background-color: #0a3641;
+  color: #f3f3f3;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #0a3641;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #f3f3f3;
+  color: #dd4b00;
+  border: 2px solid #dd4b00;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.slogan {
+  max-width: 360px;
+  margin: 20px;
+}
+
+/* Jacket cards */
+
+.popular-jackets {
+  margin-bottom: 40px;
+}
+
+.jacket-card {
+  margin: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.jacket-card-main-page {
+  border-radius: 0px 50px;
+  display: inline-block;
+  max-height: 200px;
+  color: #0a3641;
+}
+
+.jacket-card a {
+  color: #0a3641;
+  text-decoration: none;
+}
+
+/* Jackets page */
+
+.all-jackets {
+  margin-bottom: 40px;
+}
+
+.jacket-page-card {
+  padding: 12px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.jacket-page-card-img {
+  border-radius: 0px 50px;
+  display: inline-block;
+  max-height: 250px;
+  color: #0a3641;
+}
+
+.jacket-page-card a {
+  color: #0a3641;
+  text-decoration: none;
+}
+
+/* About page */
+
+.about-bg {
+  background-image: url(../images/bg-bubble-skiing.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.about-page-padding {
+  margin: 0 auto;
+  margin-bottom: 500px;
+  background-color: #f3f3f3cc;
+  border-radius: 30px;
+  max-width: fit-content;
+  padding: 5px 10px 15px 10px;
+}
+
+/* Contact page */
+
+.contact-bg {
+  background-image: url(../images/bg-bubble-skiglasses.jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+.contact-page-padding {
+  margin: 0 auto;
+  margin-bottom: 600px;
+  background-color: #f3f3f3cc;
+  border-radius: 30px;
+  max-width: fit-content;
+  padding: 5px 10px 15px 10px;
+}
+
+/* Header images */
+.header-image {
+  background-size: cover;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-image-first {
+  background-image: url(../images/raindrops.jpg);
+}
+
+.header-image-jackets {
+  background-image: url(../images/jacket-kanoo.jpg);
+}
+
+.header-image-specific-jacket {
+  background-image: url(../images/jacket-in-snow.jpg);
+}
+
+.header-image-cart {
+  background-image: url(../images/on-beach-cropped.jpg);
+}
+
+.header-image-order-success {
+  background-image: url(../images/jacket-kanoo.jpg);
+  background-position-y: -940px;
+}
+
+/* Product page */
+
+.product-page-card,
+.product-info {
+  display: inline-block;
+}
+
+.product-info {
+  max-width: 330px;
+  text-align: left;
+  padding-bottom: 70px;
+  vertical-align: top;
+}
+
+.product-card-color {
+  height: 17px;
+  width: 17px;
+  border-radius: 5px;
+  border: 1.5px solid #0a3641;
+  margin: 3px auto;
+  display: inline-block;
+}
+
+.product-card-size {
+  height: 17px;
+  width: 17px;
+  border-radius: 5px;
+  border: 1.5px solid #0a3641;
+  padding: 0 2px 2px 2px;
+  margin: 3px auto;
+  display: inline-block;
+  text-align: center;
+}
+
+.product-card-size::after {
+  background-color: #dd4b00;
+}
+
+.jacket-page-card,
+.product-card-color,
+h3 {
+  margin: 0 auto;
+}
+
+.product-card-price {
+  color: #dd4b00;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.add-to-cart {
+  text-align: center;
+}
+
+/* Header */
+
+header {
+  background-color: #0a3641;
+  background-size: cover;
+  margin: auto;
+  padding: 0px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #f3f3f3af;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  max-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.header-div {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.main-nav li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.main-nav {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+#search {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #f3f3f3;
+}
+
+.header-search {
+  padding-top: 17px;
+  padding-right: 20px;
+  font-size: 1em;
+  background-color: #0a3641;
+  color: white;
+  padding: 10px;
+}
+
+.fa-magnifying-glass {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #0a3641;
+  color: #f3f3f3;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.footer-logo {
+  max-height: 3.5em;
+  padding-top: 20px;
+}
+
+.footer-nav {
+  text-align: left;
+  padding-top: 0px;
+}
+
+.footer-nav a {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  padding: 0px;
+}
+
+.footer-nav a:hover {
+  color: #f3f3f3af;
+}
+
+.footer-nav ul {
+  padding: 0px;
+}
+
+.footer-nav li {
+  display: block;
+}
+
+.copyright {
+  float: left;
+  padding-left: 20px;
+}
+
+.footer-copyright {
+  display: inline-block;
+}
+
+.footer-shopping,
+.footer-info,
+.footer-social {
+  display: inline-block;
+  vertical-align: top;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+.footer-end {
+  float: right;
+}
+
+.footer-fix {
+  max-height: 3.5em;
+  padding-top: 20px;
+  padding-right: 20px;
+  float: right;
+}
+
+@media (max-width: 1070px) {
+  .header-image-first,
+  .header-image-jackets,
+  .header-image-specific-jacket,
+  .header-image-cart,
+  .header-image-order-success {
+    display: none;
+  }
+
+  .header-search {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
+
+  .header-div {
+    position: top;
+    order: 2;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger-menu {
+    order: 1;
+    display: flex;
+    color: white;
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 15px;
+  }
+  .hamburger-choices ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .hamburger-choices a {
+    display: block;
+    padding: 10px;
+  }
+
+  .hamburger-choices {
+    display: none;
+    position: absolute;
+    background-color: #0a3641;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+
+  #checkbox:checked ~ .hamburger-choices {
+    display: block;
+  }
+
+  #checkbox {
+    display: none;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .popular-jackets {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .jacket-card-main-page {
+    min-width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 30px;
+  }
+
+  .footer-fix {
+    display: none;
+  }
+
+  .footer-shopping,
+  .footer-social,
+  .footer-info {
+    padding: 10px;
+    order: 1;
+  }
+
+  .copyright {
+    order: 2;
+    margin-right: 20px;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
+}

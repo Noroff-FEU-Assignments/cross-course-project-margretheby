@@ -4,10 +4,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My first website</title>
+    <meta name="description" content="Jackets made to last through every activity.">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
+    <title>RAINYDAYS</title>
 </head>
 <body>
-    <h1>Hello world!</h1>
-    <p>Welcome to my first website.</p>
+    <header>
+        <section class="header">
+            <div class="header-div">
+                <a href="index.html"><img src="images/header-logo.jpg" alt="mountain logo rainydays" class="header-logo"></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="jackets.html">JACKETS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="cart.html">CART</a></li>
+                </ul>
+            </nav>
+        <section class="hamburger-menu">
+            <div class="hamburger-checked">
+                <label for="checkbox"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="checkbox" name="checkbox" class="visually-hidden">
+                <div class="hamburger-choices">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+            </div>
+
+            </div>
+        </section>
+        <section class="header-search">
+            <input type=text name="search" id="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </section>
+    </header>
+    <main>
+        <section class="header-image header-image-first">
+        </section>
+        <section>
+            <div>
+                <h1>WELCOME</h1>
+                <p>Not quite ready for your next adventure?</p>
+                <p>RAINYDAYS got you covered.</p>
+            </div>
+            <div>
+                <img src="images/slogan.jpg" alt="Pushing the comfort zone" class="slogan">
+            </div>
+            <a href="jackets.html" class="cta-button">GET READY</a>
+        </section>
+        <section>
+            <h2>OUR BEST SELLERS</h2>
+            <div class="popular-jackets">
+                <box class="jacket-card">
+                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="Jacket name" class="jacket-card-main-page"><h3>Jacket name</h3></a>
+                    
+                </box>
+                <box class="jacket-card">
+                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="Jacket name" class="jacket-card-main-page"><h3>Jacket name</h3></a>
+                    
+                </box>
+                <box class="jacket-card">
+                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="Jacket name" class="jacket-card-main-page"><h3>Jacket name</h3></a>
+                    
+                </box>
+                <box class="jacket-card">
+                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="Jacket name" class="jacket-card-main-page"><h3>Jacket name</h3></a>
+                </box>
+
+            </div>
+            <a href="jackets.html" class="cta-button">VIEW MORE</a>
+        </section>
+    </main>
+    <footer>
+        <section class="copyright">
+            <img src="images/footer-logo.jpg" alt="mountain logo rainydays" class="footer-logo">
+            <p>Copyright &copy; 2022</p> 
+            <p>Margrethe By</p>
+        </section>
+        <section class="footer-shopping">
+            <h3>SHOPPING</h3>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jackets.html">Jackets</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer-info">
+            <h3>INFO & HELP</h3>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer-social">
+            <h3>SOCIAL</h3>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="https://facebook.com">Facebook</a></li>
+                    <li><a href="https://instagram.com">Instagram</a></li>
+                    <li><a href="https://twitter.com">Twitter</a></li>
+                    <li><a href="https://snapchat.com">Snapchat</a></li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer-end">
+            <img src="images/footer-fix.jpg" class="footer-fix">
+        </section>
+    </footer>
 </body>
 </html>
