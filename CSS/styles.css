@@ -440,12 +440,13 @@ footer {
     display: none;
     position: absolute;
     background-color: #0a3641;
-    border-radius: 20px;
+    border-radius: 0px 0px 20px 0px;
     padding: 10px 20px;
   }
 
   #checkbox:checked ~ .hamburger-choices {
     display: block;
+    margin: 0px -20px;
   }
 
   #checkbox {
