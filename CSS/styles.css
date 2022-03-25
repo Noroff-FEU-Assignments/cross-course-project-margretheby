@@ -441,7 +441,8 @@ footer {
     position: absolute;
     background-color: #0a3641;
     border-radius: 0px 0px 20px 0px;
-    padding: 10px 20px;
+    padding: 10px 10px;
+    text-align: left;
   }
 
   #checkbox:checked ~ .hamburger-choices {
