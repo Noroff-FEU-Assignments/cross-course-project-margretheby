@@ -23,10 +23,12 @@ h1 {
 h2 {
   color: #dd4b00;
   padding-top: 10px;
+  text-transform: uppercase;
 }
 
 h3 {
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 div {
@@ -55,17 +57,13 @@ a {
   border-radius: 20px;
   border: 2px solid #0a3641;
   text-decoration: none;
-  display: inline-block;
+  text-transform: uppercase;
 }
 
 .cta-button:hover {
   background-color: #f3f3f3;
   color: #dd4b00;
   border: 2px solid #dd4b00;
-  font-weight: bold;
-  padding: 10px 20px 10px 20px;
-  border-radius: 20px;
-  text-decoration: none;
 }
 
 .slogan {
@@ -74,6 +72,10 @@ a {
 }
 
 /* Jacket cards */
+
+.best-sellers {
+  margin-top: 50px;
+}
 
 .popular-jackets {
   margin-bottom: 40px;
@@ -88,7 +90,7 @@ a {
 .jacket-card-main-page {
   border-radius: 0px 50px;
   display: inline-block;
-  max-height: 200px;
+  max-height: 300px;
   color: #0a3641;
 }
 
@@ -100,13 +102,16 @@ a {
 /* Jackets page */
 
 .all-jackets {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 .jacket-page-card {
-  padding: 12px;
-  display: inline-block;
   text-decoration: none;
+  padding: 15px 10px;
 }
 
 .jacket-page-card-img {
@@ -160,13 +165,14 @@ a {
 /* Header images */
 .header-image {
   background-size: cover;
-  min-height: 400px;
+  min-height: 600px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .header-image-first {
-  background-image: url(../images/raindrops.jpg);
+  background-image: url(../Images/raindrops.jpg);
+  min-height: 400px;
 }
 
 .header-image-jackets {
@@ -317,6 +323,10 @@ header a:hover {
   font-size: 22px;
 }
 
+.fa-magnifying-glass:hover {
+  color: #f3f3f3af;
+}
+
 /* Footer */
 
 footer {
@@ -325,7 +335,7 @@ footer {
   background-color: #0a3641;
   color: #f3f3f3;
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 100px;
   padding-top: 20px;
   padding-bottom: 20px;
   text-align: center;
@@ -390,6 +400,8 @@ footer {
 }
 
 @media (max-width: 1070px) {
+  /* Header elements */
+
   .header-image-first,
   .header-image-jackets,
   .header-image-specific-jacket,
@@ -459,6 +471,13 @@ footer {
     opacity: 0;
   }
 
+  /* Main page */
+
+  .slogan {
+    max-width: 300px;
+    margin: 20px;
+  }
+
   .popular-jackets {
     display: flex;
     flex-wrap: wrap;
@@ -468,6 +487,16 @@ footer {
   .jacket-card-main-page {
     min-width: 100%;
   }
+
+  /* Jacket page */
+  .all-jackets {
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  /* Footer */
 
   footer {
     display: flex;
