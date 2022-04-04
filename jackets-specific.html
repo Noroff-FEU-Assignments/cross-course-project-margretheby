@@ -7,6 +7,7 @@
     <meta name="description" content="Jackets made to last through every activity.">
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
+    <script src="js/script.js" defer></script>
     <title>PRODUCT NAME | RAINYDAYS</title>
 </head>
 <body>
@@ -50,11 +51,26 @@
                 <h1>Jacket name</h1>
             </div>
         </section>
-        <section class="jacket-specific">
+        <section class="jacket-specific" aria-label="Photos of this jacket">
             <div class="jacket-carousel">
-                <i class="btn-icons fa-solid fa-chevron-left"></i>
-                <img src="images/resize-jacket-on-road.jpg" class="jacket-card-main-page" alt="Jacket shown from the side">
-                <i class="btn-icons fa-solid fa-chevron-right"></i>
+                <div class="carousel" data-carousel>
+                    <button class="btn-arrows btn-left" data-carousel-button="prev"><i class="btn-icons fa-solid fa-chevron-left"></i></button>
+                        <ul data-slides>
+                            <li class="jacket-carousel-slide" data-active>
+                                <img src="images/carousel1.png" alt="Jacket shown from the side">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="images/carousel2.png" alt="Jacket shown from behind">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="Images/carousel3.png" alt="Jacket shown on someone skiing">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="images/carousel4.png" alt="Jacket's details on the arms and zipper">
+                            </li>
+                        </ul>
+                    <button class="btn-arrows btn-right" data-carousel-button="next"><i class="btn-icons fa-solid fa-chevron-right"></i></button>
+                </div>
             </div>
             <div class="specific-product-info">
                 <p>Product description will appear here, giving the buyer information about the jackets specific features. What is the best use for this specific jacket, and detailed information about the best use.</p>
@@ -79,6 +95,9 @@
                         <div class="product-size-card">L</div>
                         <div class="product-size-card">XL</div>
                     </div>
+                </div>
+                <div class="add-to-cart">
+                    <a href="cart.html" class="cta-button">Add to cart</a>
                 </div>
             </div>
         </section>

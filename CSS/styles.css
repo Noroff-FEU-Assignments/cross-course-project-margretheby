@@ -133,8 +133,8 @@ a {
 /* Specific jacket page */ 
 .jacket-specific {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 320px 430px;
+  gap: 0px;
   margin: 0 auto;
   max-width: 1000px;
 }
@@ -143,17 +143,86 @@ a {
   display: flex;
   align-items: center;
 }
+
+.carousel {
+  height: 100vh;
+  position: relative;
+}
+
+.btn-left {
+  left: -52px;
+} 
+
+.btn-right {
+  right: -250px;
+}
+
+.carousel > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.jacket-carousel-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: 200ms opacity ease-in-out;
+  transition-delay: 200ms;
+}
+
+.jacket-carousel-slide > img {
+  display: block;
+  max-height: 300px;
+  max-width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.jacket-carousel-slide[data-active] {
+  opacity: 1;
+  z-index: 1;
+  transition-delay: 0ms;
+}
+
+.btn-arrows {
+  position: absolute;
+  z-index: 2;
+  top: 17%;
+  border: none;
+  background: none;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.btn-icons:hover {
+  color:#f3f3f3af;
+}
+
+.second-jacket-card {
+  transition-property: background-image;
+  transition-duration: 10s;
+  background: url(../Images/resize-on-beach.jpg);
+}
+
+.second-jacket-card:hover {
+  background: url(../Images/resize-on-beach.jpg);
+}
+
 .btn-icons {
   background-color: #0a3641;
   border-radius: 50%;
   font-size: 22px;
   color:#f3f3f3;
   width: 30px;
-  height: 30px;
+  height: 26px; /* husk padding-top: 4px; på selve ikonene */ 
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin: 5px;
+}
+
+.fa-chevron-right, .fa-chevron-left {
+  padding-top: 4px;
 }
 
 .available-colors, .color-cards {
@@ -174,6 +243,10 @@ a {
 
 .product-size-cards, .product-size {
   display: inline-block;
+}
+
+.product-size-cards {
+  padding-bottom: 25px;
 }
 
 .product-size-card {
