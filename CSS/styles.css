@@ -29,7 +29,11 @@ h2 {
 }
 
 h3 {
-  margin: 0 auto;
+  margin: 10px 0px;
+}
+
+p {
+  margin: 10px 0px;
 }
 
 div {
@@ -129,7 +133,59 @@ a {
 /* Specific jacket page */ 
 .jacket-specific {
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 auto;
+  max-width: 1000px;
 }
+
+.jacket-carousel {
+  display: flex;
+  align-items: center;
+}
+.btn-icons {
+  background-color: #0a3641;
+  border-radius: 50%;
+  font-size: 22px;
+  color:#f3f3f3;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
+}
+
+.available-colors, .color-cards {
+  display: inline-block;
+}
+
+.available-colors, .product-size {
+  margin: 0px;
+  padding: 0px;
+}
+
+.specific-product-info {
+  max-width: 330px;
+  text-align: left;
+  padding-bottom: 70px;
+  vertical-align: top;
+}
+
+.product-size-cards, .product-size {
+  display: inline-block;
+}
+
+.product-size-card {
+  background-color: #f3f3f3;
+  border: 1px solid #0a3641;
+  border-radius: 5px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  display: inline-block;
+}
+
 
 /* About page */
 
@@ -212,27 +268,12 @@ a {
 }
 
 .product-card-color {
-  height: 17px;
-  width: 17px;
+  height: 20px;
+  width: 20px;
   border-radius: 5px;
   border: 1.5px solid #0a3641;
   margin: 3px auto;
   display: inline-block;
-}
-
-.product-card-size {
-  height: 17px;
-  width: 17px;
-  border-radius: 5px;
-  border: 1.5px solid #0a3641;
-  padding: 0 2px 2px 2px;
-  margin: 3px auto;
-  display: inline-block;
-  text-align: center;
-}
-
-.product-card-size::after {
-  background-color: #dd4b00;
 }
 
 .jacket-page-card,
