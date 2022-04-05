@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
     <title>CONTACT | RAINYDAYS</title>
 </head>
-<body class="contact-bg">
+<body>
     <header class="header">
         <div class="header-div">
             <a href="index.html"><img src="images/header-logo.jpg" alt="mountain logo rainydays" class="header-logo"></a>
@@ -46,10 +46,52 @@
             <div>
                 <h1>Checkout</h1>
             </div>
-            <form method="POST">
-                <label for="fullname">Full name: </label><input type="text" name="fullname" id="fullname">
-                <label for="adress">Adress: </label><input type="text" name="adress" id="adress">
-            </form>
+        </section>
+        <section class="checkout-layout">
+            <div class="checkout-heading">
+                <h3>Order summary</h3>
+            </div>
+            <div class="checkout-summary">
+                <div class="cart-product-info">
+                    <div class="cart-jacket-image">
+                        <img src="images/carousel1.png" class="cart-image" alt="The Hiker">
+                    </div>
+                    <div class="cart-jacket-info">
+                        <span>THE HIKER</span>
+                        <div class="color-section">
+                            <p class="color-cart">Color: </p>
+                            <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                        </div>
+                        <div class="size-section">
+                            <p class="size-cart">Size: </p>
+                            <div class="product-size-card">S</div>
+                        </div>
+                        <div class="size-section">
+                            <p class="color-cart">Amount: </p>
+                            <div class="product-size-card">
+                                1
+                            </div>
+                        </div>
+                        <div class="cart-price">
+                            <h2>1.299 KR</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <form method="POST" class="checkout-first">
+                    <label for="firstname">First name</label><input type="text" name="firstname" id="fullname">
+                    <label for="lastname">Last name</label><input type="text" name="lastname" id="lastname">
+                    <label for="email">E-mail</label><input type="text" name="email" id="email">
+                    <input type="checkbox" name="email-updates" id="email-updates"><label for="email-updates" id="email-updates-label">Keep me updated on the latest trends.</label>
+                </form>
+                <form method="POST" class="checkout-second">
+                    <label for="adress">Delivery address</label><input type="text" name="address" id="address">
+                    <label for="postcode">Post code</label><input type="text" name="postcode" id="postcode">
+                    <label for="city">City</label><input type="text" name="city" id="city">
+                    <label for="cardnumber">Card number</label><input type="text" name="cardnumber" id="cardnumber">
+                </form>
+        </section>
+        <section>
             <div class="btn-purchase">
                 <a href="checkout-success.html" class="cta-button">Purchase</a>
             </div>
