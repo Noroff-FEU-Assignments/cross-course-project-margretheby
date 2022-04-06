@@ -134,9 +134,18 @@ a {
 .jacket-specific {
   display: grid;
   grid-template-columns: 320px 430px;
+  grid-template-rows: 300px;
   gap: 0px;
-  margin: 0 auto;
-  max-width: 1000px;
+}
+
+.jacket-specific div {
+  flex-direction: column;
+}
+
+.jacket-specific-layout {
+  display: flex;
+  justify-content: space-around;
+  margin-right: 200px;
 }
 
 .jacket-carousel {
@@ -145,6 +154,7 @@ a {
 }
 
 .carousel {
+  margin: 0 auto;
   height: 350px;
   position: absolute;
 }
@@ -238,7 +248,7 @@ a {
 .specific-product-info {
   max-width: 330px;
   text-align: left;
-  padding-bottom: 70px;
+  padding: 0px 0px 70px 100px;
   vertical-align: top;
 }
 
@@ -406,7 +416,7 @@ form input {
   margin: 0 auto;
   margin-bottom: 450px;
   background-color: #f3f3f3cc;
-  border-radius: 30px;
+  border-radius: 0px 70px 0px 70px;
   max-width: fit-content;
   padding: 5px 10px 15px 10px;
 }
@@ -512,10 +522,6 @@ h3 {
   color: #dd4b00;
   text-align: center;
   padding-bottom: 10px;
-}
-
-.add-to-cart {
-  text-align: center;
 }
 
 /* Header */
@@ -673,12 +679,24 @@ footer {
   .header-image-jackets,
   .header-image-specific-jacket,
   .header-image-cart,
-  .header-image-checkout-success {
+  .header-image-checkout-success, 
+  .header-search, 
+  .main-nav, 
+  #checkbox {
     display: none;
   }
+  .contact-bg {
+    background: url(../images/resize-skiier.jpg);
+  }
 
-  .header-search {
-    display: none;
+  .about-bg {
+    background: url(../Images/resize-mike-kilcoyne-hdzGZRCYMSU-unsplash.jpg);
+  }
+
+  .contact-bg, .about-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
   }
 
   .header {
@@ -691,10 +709,6 @@ footer {
   .header-div {
     position: top;
     order: 2;
-  }
-
-  .main-nav {
-    display: none;
   }
 
   .hamburger-menu {
@@ -711,7 +725,7 @@ footer {
     list-style: none;
   }
 
-  .hamburger-choices a {
+  .jacket-page-cart-img, .color-cards, .hamburger-choices a {
     display: block;
     padding: 10px;
   }
@@ -728,10 +742,6 @@ footer {
   #checkbox:checked ~ .hamburger-choices {
     display: block;
     margin: 22px -20px;
-  }
-
-  #checkbox {
-    display: none;
   }
 
   .visually-hidden {
@@ -764,6 +774,70 @@ footer {
     margin: 0 auto;
   }
 
+  /* Jacket specific page*/
+  .jacket-specific {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 300px;
+  }
+
+  .jacket-carousel {
+    margin-right: 200px;
+  }
+
+  .specific-product-info,  .specific-product-info  > h3 {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .specific-product-info > p {
+    text-align: left;
+  }
+
+  .jacket-specific-layout {
+    margin-right: 0px;
+  }
+
+  .color-cards {
+    padding: 0px;
+  }
+
+  .size-and-color-mobile, .product-size-cards {
+    display: block;
+  }
+
+  .add-to-cart {
+    margin-top: 60px;
+  }
+
+  /* Checkout page */
+
+  .checkout-layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-layout > div, .checkout-layout > form  {
+    margin: 0 auto;
+  }
+
+  .cart-jacket-image, .cart-jacket-info {
+    padding: 0px 10px;
+  }
+
+  #email-updates {
+    margin-left: -5px;
+  }
+
+  .btn-purchase {
+    margin-bottom: 50px;
+  }
+
+  /* Page padding for About and Contact */
+
+  .page-padding {
+    margin-bottom: 250px;
+  }
+
   /* Footer */
 
   footer {
@@ -791,10 +865,49 @@ footer {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 680px) {
   .footer-shopping,
   .footer-social,
   .footer-info {
     display: block;
+  }
+
+  .cart-layout {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px;
+  }
+
+  .media-background {
+    margin: 0 auto;
+    max-width: 300px;
+  }
+
+  .cart-heading-item {
+    order: 1;
+    margin: 0px;
+  }
+
+  .cart-product-info {
+    order: 2;
+    justify-content: center;
+  }
+
+  .cart-heading-amount {
+    order: 3;
+    margin: 0px;
+  }
+
+  .size-card-cart {
+    order: 4;
+  }
+
+  .cart-heading-price {
+    order: 5;
+    margin: 0px;
+  }
+
+  .cart-price {
+    order: 6;
   }
 }
