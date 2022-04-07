@@ -70,9 +70,16 @@ a {
   border: 2px solid #dd4b00;
 }
 
-.slogan {
-  max-width: 360px;
-  margin: 20px;
+.slogan-layout {
+  display: flex;
+  margin: 0 auto;
+  max-width: 370px;
+}
+
+.fa-xmark {
+  color: #0a3641;
+  font-size: 30px;
+  margin-bottom: 50px;
 }
 
 /* Jacket cards */
@@ -366,7 +373,7 @@ form input {
   margin: 0 auto;
 }
 
-.checkout-first, .checkout-second > label {
+.checkout-first > label, .checkout-second > label {
   margin: 0 auto;
 }
 
