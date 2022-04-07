@@ -70,6 +70,139 @@ a {
   border: 2px solid #dd4b00;
 }
 
+.btn-icons {
+  background-color: #0a3641;
+  border-radius: 50%;
+  font-size: 22px;
+  color:#f3f3f3;
+  width: 35px;
+  height: 28px;
+  padding-top: 6px;
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+}
+
+/* Header */
+
+header {
+  background-color: #0a3641;
+  background-size: cover;
+  margin: auto;
+  padding: 0px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover {
+  color: #f3f3f3af;
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  max-height: 40px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
+.header-div {
+  margin: 0;
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.main-nav li {
+  display: inline;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.main-nav {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+#search {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #f3f3f3;
+}
+
+#search, .header-search a {
+  display: inline;
+}
+
+.header-search {
+  padding-top: 17px;
+  padding-right: 20px;
+  font-size: 1em;
+  background-color: #0a3641;
+  color: white;
+  padding: 10px;
+}
+
+.fa-magnifying-glass {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+
+.fa-magnifying-glass:hover {
+  color: #f3f3f3af;
+}
+
+/* Header images */
+
+.header-image {
+  background-size: cover;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-image-first {
+  background-image: url(../Images/raindrops.jpg);
+  min-height: 400px;
+}
+
+.header-image-jackets {
+  background-image: url(../images/jacket-kanoo.jpg);
+}
+
+.header-image-specific-jacket {
+  background-image: url(../images/jacket-in-snow.jpg);
+}
+
+.header-image-cart {
+  background-image: url(../images/on-beach-cropped.jpg);
+  min-height: 440px;
+  background-position-y: -50px;
+}
+
+.header-image-checkout-success {
+  background-image: url(../images/hiker-from-tent.jpg);
+  background-position-y: -100px;
+}
+
+/* Index page */ 
+
 .slogan-layout {
   display: flex;
   margin: 0 auto;
@@ -226,24 +359,21 @@ a {
   background: url(../Images/resize-on-beach.jpg);
 }
 
-.btn-icons {
-  background-color: #0a3641;
-  border-radius: 50%;
-  font-size: 22px;
-  color:#f3f3f3;
-  width: 35px;
-  height: 28px; /* husk padding-top: 6px; på selve ikonene */ 
-  padding-top: 6px;
-  display: flex;
-  justify-content: space-around;
-  margin: 5px;
-}
-
 .fa-chevron-right, .fa-chevron-left, .fa-phone, .fa-location-dot, .fa-message, .fa-check {
   padding-top: 7px;
 }
 
-.available-colors, .color-cards {
+.available-colors, 
+.color-cards, 
+.product-size-cards, 
+.product-size, 
+.cart-jacket-image, 
+.cart-jacket-info, 
+.color-cart, 
+.size-cart, 
+.product-size-card, 
+.color-section  
+.product-card-color {
   display: inline-block;
 }
 
@@ -257,10 +387,6 @@ a {
   text-align: left;
   padding: 0px 0px 70px 100px;
   vertical-align: top;
-}
-
-.product-size-cards, .product-size {
-  display: inline-block;
 }
 
 .product-size-cards {
@@ -278,6 +404,7 @@ a {
 }
 
 /* Cart page */ 
+
 .cart-layout {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -287,14 +414,6 @@ a {
   gap: 20px 10px;
   max-width: 800px;
   margin: 0 auto;
-}
-
-.cart-jacket-image, .cart-jacket-info, .color-cart, .size-cart, .product-size-card {
-  display: inline-block;
-}
-
-.color-section  .product-card-color {
-  display: inline-block;
 }
 
 .cart-product-info, .size-card-cart, .cart-price, .color-section {
@@ -327,10 +446,6 @@ a {
 }
 
 /* Checkout page */
-.btn-purchase {
-  margin: 0 auto;
-  margin-bottom: 300px;
-}
 
 .checkout-layout {
   display: grid;
@@ -375,6 +490,11 @@ form input {
 
 .checkout-first > label, .checkout-second > label {
   margin: 0 auto;
+}
+
+.btn-purchase {
+  margin: 0 auto;
+  margin-bottom: 300px;
 }
 
 /* Checkout success */ 
@@ -466,40 +586,6 @@ form input {
   display: inline-block;
 }
 
-/* Header images */
-.header-image {
-  background-size: cover;
-  min-height: 600px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.header-image-first {
-  background-image: url(../Images/raindrops.jpg);
-  min-height: 400px;
-}
-
-.header-image-jackets {
-  background-image: url(../images/jacket-kanoo.jpg);
-}
-
-.header-image-specific-jacket {
-  background-image: url(../images/jacket-in-snow.jpg);
-}
-
-.header-image-cart {
-  background-image: url(../images/on-beach-cropped.jpg);
-  min-height: 440px;
-  background-position-y: -50px;
-}
-
-.header-image-checkout-success {
-  background-image: url(../images/hiker-from-tent.jpg);
-  background-position-y: -100px;
-}
-
-
-
 /* Product page */
 
 .product-page-card,
@@ -533,91 +619,6 @@ h3 {
   color: #dd4b00;
   text-align: center;
   padding-bottom: 10px;
-}
-
-/* Header */
-
-header {
-  background-color: #0a3641;
-  background-size: cover;
-  margin: auto;
-  padding: 0px;
-}
-
-header a {
-  color: white;
-  text-decoration: none;
-}
-
-header a:hover {
-  color: #f3f3f3af;
-  text-decoration: none;
-}
-
-.header {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-logo {
-  max-height: 40px;
-  padding-top: 10px;
-  padding-bottom: 0px;
-}
-
-.header-div {
-  margin: 0;
-  padding-bottom: 5px;
-  padding-left: 5px;
-}
-
-.main-nav li {
-  display: inline;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-
-.main-nav {
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.hamburger-menu {
-  display: none;
-}
-
-#search {
-  border-radius: 5px;
-  border-width: 1px;
-  border-color: #f3f3f3;
-}
-
-#search, .header-search a {
-  display: inline;
-}
-
-.header-search {
-  padding-top: 17px;
-  padding-right: 20px;
-  font-size: 1em;
-  background-color: #0a3641;
-  color: white;
-  padding: 10px;
-}
-
-.fa-magnifying-glass {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 22px;
-}
-
-.fa-magnifying-glass:hover {
-  color: #f3f3f3af;
 }
 
 /* Footer */
