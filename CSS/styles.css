@@ -363,6 +363,11 @@ form input {
   border: 1px solid #0a3641;
   border-radius: 5px;
   font-size: 14px;
+  margin: 0 auto;
+}
+
+.checkout-first, .checkout-second > label {
+  margin: 0 auto;
 }
 
 /* Checkout success */ 
