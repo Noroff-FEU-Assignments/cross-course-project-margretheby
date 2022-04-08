@@ -5,10 +5,6 @@ body {
   color: #0a3641;
   font-family: Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-}
-
-main,
-body {
   text-align: center;
 }
 
@@ -28,11 +24,7 @@ h2 {
   padding-top: 10px;
 }
 
-h3 {
-  margin: 10px 0px;
-}
-
-p {
+h3, p {
   margin: 10px 0px;
 }
 
@@ -50,7 +42,7 @@ a {
   color: #0a3641;
 }
 
-#current {
+#current, .fa-magnifying-glass:hover {
   color: #f3f3f3af;
 }
 
@@ -67,7 +59,7 @@ a {
 .cta-button:hover {
   background-color: #f3f3f3;
   color: #dd4b00;
-  border: 2px solid #dd4b00;
+  border-color: #dd4b00;
 }
 
 .btn-icons {
@@ -81,6 +73,10 @@ a {
   display: flex;
   justify-content: space-around;
   margin: 5px;
+}
+
+.btn-icons:hover {
+  color:#f3f3f3af;
 }
 
 /* Header */
@@ -164,9 +160,7 @@ header a:hover {
   font-size: 22px;
 }
 
-.fa-magnifying-glass:hover {
-  color: #f3f3f3af;
-}
+
 
 /* Header images */
 
@@ -225,7 +219,7 @@ header a:hover {
   margin-bottom: 40px;
 }
 
-.jacket-card {
+.jacket-card, .jacket-card a  {
   margin: 10px;
   display: inline-block;
   text-decoration: none;
@@ -238,12 +232,39 @@ header a:hover {
   color: #0a3641;
 }
 
-.jacket-card a {
-  color: #0a3641;
-  text-decoration: none;
+/* Jackets page */
+
+.product-page-card,
+.product-info {
+  display: inline-block;
 }
 
-/* Jackets page */
+.product-info {
+  max-width: 330px;
+  text-align: left;
+  padding-bottom: 70px;
+  vertical-align: top;
+}
+
+.product-card-color {
+  height: 20px;
+  width: 20px;
+  border-radius: 5px;
+  border: 1.5px solid #0a3641;
+  margin: 3px auto;
+  display: inline-block;
+}
+
+.jacket-page-card,
+.product-card-color,
+h3 {
+  margin: 0 auto;
+}
+
+.product-card-price {
+  color: #dd4b00;
+  padding-bottom: 10px;
+}
 
 .all-jackets {
   margin-bottom: 100px;
@@ -254,7 +275,6 @@ header a:hover {
 }
 
 .jacket-page-card {
-  text-decoration: none;
   padding: 15px 10px;
 }
 
@@ -263,11 +283,6 @@ header a:hover {
   display: inline-block;
   max-height: 250px;
   color: #0a3641;
-}
-
-.jacket-page-card a {
-  color: #0a3641;
-  text-decoration: none;
 }
 
 /* Specific jacket page */ 
@@ -345,20 +360,6 @@ header a:hover {
   cursor: pointer;
 }
 
-.btn-icons:hover {
-  color:#f3f3f3af;
-}
-
-.second-jacket-card {
-  transition-property: background-image;
-  transition-duration: 10s;
-  background: url(../Images/resize-on-beach.jpg);
-}
-
-.second-jacket-card:hover {
-  background: url(../Images/resize-on-beach.jpg);
-}
-
 .fa-chevron-right, .fa-chevron-left, .fa-phone, .fa-location-dot, .fa-message, .fa-check {
   padding-top: 7px;
 }
@@ -387,10 +388,6 @@ header a:hover {
   text-align: left;
   padding: 0px 0px 70px 100px;
   vertical-align: top;
-}
-
-.product-size-cards {
-  padding-bottom: 25px;
 }
 
 .product-size-card {
@@ -425,7 +422,6 @@ header a:hover {
 
 .cart-price h2 {
   padding: 0px 0px 10px 0px;
-  
 }
 
 .color-section, .size-section {
@@ -492,11 +488,6 @@ form input {
   margin: 0 auto;
 }
 
-.btn-purchase {
-  margin: 0 auto;
-  margin-bottom: 300px;
-}
-
 /* Checkout success */ 
 
 .check-icon, .order-success {
@@ -506,12 +497,6 @@ form input {
 
 .check-icon {
   padding: 0px 20px 30px 0px;
-}
-
-.fa-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
 }
 
 .order-success {
@@ -524,7 +509,6 @@ form input {
   padding: 40px 0px;
 }
 
-
 /* About page */
 
 .about-bg {
@@ -534,7 +518,7 @@ form input {
   background-position: top right;
 }
 
-.got-questions {
+.got-questions, .free-to-ask {
   margin-top: 50px;
 }
 
@@ -550,10 +534,6 @@ form input {
   border-radius: 0px 70px 0px 70px;
   max-width: fit-content;
   padding: 5px 10px 15px 10px;
-}
-
-.free-to-ask {
-  padding-top: 10px;
 }
 
 /* Contact page */
@@ -584,41 +564,6 @@ form input {
 #search-page, .search-page {
   margin: 0 auto;
   display: inline-block;
-}
-
-/* Product page */
-
-.product-page-card,
-.product-info {
-  display: inline-block;
-}
-
-.product-info {
-  max-width: 330px;
-  text-align: left;
-  padding-bottom: 70px;
-  vertical-align: top;
-}
-
-.product-card-color {
-  height: 20px;
-  width: 20px;
-  border-radius: 5px;
-  border: 1.5px solid #0a3641;
-  margin: 3px auto;
-  display: inline-block;
-}
-
-.jacket-page-card,
-.product-card-color,
-h3 {
-  margin: 0 auto;
-}
-
-.product-card-price {
-  color: #dd4b00;
-  text-align: center;
-  padding-bottom: 10px;
 }
 
 /* Footer */
@@ -742,6 +687,8 @@ footer {
     padding: 10px;
   }
 
+  /* Hamburger menu */ 
+
   .hamburger-choices {
     display: none;
     position: absolute;
@@ -765,7 +712,7 @@ footer {
 
   .slogan {
     max-width: 300px;
-    margin: 20px;
+    margin: 5px 20px;
   }
 
   .popular-jackets {
