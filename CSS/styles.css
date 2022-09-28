@@ -400,6 +400,10 @@ h3 {
   display: inline-block;
 }
 
+.add-to-cart-button::cue {
+  content: "Added";
+}
+
 /* Cart page */ 
 
 .cart-layout {
@@ -461,7 +465,7 @@ text-align: left;}
 .checkout-first {grid-area: checkout-first;}
 .checkout-second {grid-area: checkout-second;}
 
-.checkout-layout label, input {
+.checkout-layout label, input, textarea {
   display: block;
   text-align: left;
   width: 220px;
@@ -477,11 +481,12 @@ text-align: left;}
   width: 25px;
 }
 
-form input {
+form input, form textarea {
   border: 1px solid #0a3641;
   border-radius: 5px;
   font-size: 14px;
   margin: 0 auto;
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .checkout-first > label, .checkout-second > label {
@@ -536,6 +541,10 @@ form input {
   padding: 5px 10px 15px 10px;
 }
 
+.padding-contact {
+  margin-bottom: 100px;
+}
+
 /* Contact page */
 
 .contact-bg {
@@ -558,6 +567,34 @@ form input {
 
 .contact-address-rainydays {
   flex-direction: column;
+}
+
+.contact-form {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.first-name-error, .last-name-error, .phone-error, .email-error, .message-error {
+  display: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(208, 0, 0);
+}
+
+.send-message {
+  margin: 20px 0px;
+}
+
+#message {
+  height: 100px;
+}
+
+#first-name, #last-name, #phone, #email, #message {
+  margin-bottom: 10px;
+}
+
+.success-message {
+  display: none;
 }
 
 /* Search page */ 
