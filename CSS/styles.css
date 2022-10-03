@@ -1,4 +1,5 @@
 /* Main content */
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap'); 
 
 body {
   background-color: #f3f3f3;
@@ -8,13 +9,13 @@ body {
   text-align: center;
 }
 
-h1, h2, h3, .cta-button {
+h1, h2, h3, .cta-button, header > nav {
   text-transform: uppercase;
+  font-family: 'Oswald', "Lucida Sans Unicode", "Lucida Grande",
+  "Lucida Sans", Arial, sans-serif;
 }
 
 h1 {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   font-size: 3.5em;
   color: #dd4b00;
 }
@@ -49,6 +50,7 @@ a {
 .cta-button {
   background-color: #0a3641;
   color: #f3f3f3;
+  font-size: 1.1em;
   font-weight: bold;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
@@ -449,19 +451,19 @@ h3 {
 
 .checkout-layout {
   display: grid;
-  grid-template-columns: 250px 250px 250px;
+  grid-template-columns: 250px 250px;
   grid-template-rows: 20px 1fr;
   gap: 20px 30px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   grid-template-areas: 
-  'checkout-heading checkout-heading checkout-heading'
-  'cart-product-info checkout-first checkout-second';
+  'checkout-heading checkout-heading'
+  'cart-product-info checkout-first';
 }
 
 .checkout-heading {grid-area: checkout-heading;
 text-align: left;}
-.checkout-layout .cart-product-info {grid-area: cart-product-info; background-color: #e5e4e4; border-radius: 0px 30px;}
+.checkout-summary .cart-product-info {grid-area: cart-product-info; background-color: #e5e4e4; border-radius: 0px 30px;}
 .checkout-first {grid-area: checkout-first;}
 .checkout-second {grid-area: checkout-second;}
 
@@ -469,6 +471,10 @@ text-align: left;}
   display: block;
   text-align: left;
   width: 220px;
+} 
+
+.checkout-padding {
+  margin: 20px auto;
 }
 
 #email-updates, #email-updates-label {
@@ -574,7 +580,7 @@ form input, form textarea {
   margin-bottom: 20px;
 }
 
-.first-name-error, .last-name-error, .phone-error, .email-error, .message-error {
+.first-name-error, .last-name-error, .phone-error, .email-error, .message-error, .cardnumber-error, .city-error, .postcode-error, .address-error {
   display: none;
   font-size: 12px;
   font-weight: bold;

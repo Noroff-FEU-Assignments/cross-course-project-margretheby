@@ -52,7 +52,7 @@
             <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
         </div>
     </header>
-    <main class="contact-1.299">
+    <main>
         <section>
             <div>
                 <h1>Checkout</h1>
@@ -62,51 +62,70 @@
             <div class="checkout-heading">
                 <h3>Order summary</h3>
             </div>
-            <div class="checkout-summary">
-                <div class="cart-product-info">
-                    <div class="cart-jacket-image">
-                        <img src="images/carousel1.png" class="cart-image" alt="The Hiker">
-                    </div>
-                    <div class="cart-jacket-info">
-                        <span>THE HIKER</span>
-                        <div class="color-section">
-                            <p class="color-cart">Color: </p>
-                            <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                <div class="checkout-summary">
+                    <div class="cart-product-info">
+                        <div class="cart-jacket-image">
+                        <a href="jackets-specific.html">
+                            <img src="images/carousel1.png" class="cart-image" alt="The Hiker">
+                        </a>
                         </div>
-                        <div class="size-section">
-                            <p class="size-cart">Size: </p>
-                            <div class="product-size-card">S</div>
-                        </div>
-                        <div class="size-section">
-                            <p class="color-cart">Amount: </p>
-                            <div class="product-size-card">
-                                1
+                        <div class="cart-jacket-info">
+                            <span>THE HIKER</span>
+                            <div class="color-section">
+                                <p class="color-cart">Color: </p>
+                                <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
                             </div>
-                        </div>
-                        <div class="cart-price">
-                            <h2>1.299 KR</h2>
+                            <div class="size-section">
+                                <p class="size-cart">Size: </p>
+                                <div class="product-size-card">S</div>
+                            </div>
+                            <div class="size-section">
+                                <p class="color-cart">Amount: </p>
+                                <div class="product-size-card">
+                                    1
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                <h2>1.299 KR</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-                <form method="POST" class="checkout-first">
-                    <label for="firstname">First name</label><input type="text" name="firstname" id="firstname">
-                    <label for="lastname">Last name</label><input type="text" name="lastname" id="lastname">
-                    <label for="email">E-mail</label><input type="text" name="email" id="email">
-                    <input type="checkbox" name="email-updates" id="email-updates"><label for="email-updates" id="email-updates-label">Keep me updated on the latest trends.</label>
+                    <form class="cart-checkout-form">
+                    <div class="checkout-first">
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" id="firstname">
+                        <div class="first-name-error">Your first name must contain at least 2 characters</div>
+                        <label for="lastname">Last name</label>
+                        <input type="text" name="lastname" id="lastname">
+                        <div class="last-name-error">Your last name must contain at least 2 characters</div>
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email">
+                        <div class="email-error">Invalid e-mail address</div>
+                        <input type="checkbox" name="email-updates" id="email-updates">
+                        <label for="email-updates" id="email-updates-label">Keep me updated on the latest trends.</label>
+                    </div>
+                    <div class="checkout-second">
+                        <label for="address">Delivery address</label>
+                        <input type="text" name="address" id="address">
+                        <div class="address-error">Please enter your delivery address.</div>
+                        <label for="postcode">Post code</label>
+                        <input type="text" name="postcode" id="postcode">
+                        <div class="postcode-error">Your post code must contain at least 4 characters</div>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                        <div class="city-error">Your city is required.</div>
+                        <label for="cardnumber">Card number</label>
+                        <input type="text" name="cardnumber" id="cardnumber">
+                        <div class="cardnumber-error">Your card number must contain 16 characters</div>
+                    </div>
+                        <div>
+                            <div class="add-to-cart">
+                                <button class="cta-button checkout-padding">Check out</button>
+                            </div>
+                        </div>
                     </form>
-                <form method="POST" class="checkout-second">
-                    <label for="address">Delivery address</label><input type="text" name="address" id="address">
-                    <label for="postcode">Post code</label><input type="text" name="postcode" id="postcode">
-                    <label for="city">City</label><input type="text" name="city" id="city">
-                    <label for="cardnumber">Card number</label><input type="text" name="cardnumber" id="cardnumber">
-                </form>
         </section>
-        <div>
-            <div class="add-to-cart">
-                <a href="checkout-success.html" class="cta-button">Checkout</a>
-            </div>
-        </div>
     </main>
     <footer>
         <div class="copyright">
@@ -148,5 +167,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
 </body>
 </html>
