@@ -1,5 +1,7 @@
 const buttons = document.querySelectorAll("[data-carousel-button]")
+const successMessage = document.querySelector(".hidden");
 
+// image carousel
 buttons.forEach(button => {
     button.addEventListener("click", () => {
         const offset = button.dataset.carouselButton === "next" ? 1 : -1
@@ -18,9 +20,7 @@ buttons.forEach(button => {
 })
 
 const addToCart = document.querySelector(".add-to-cart-button");
-const navCartUpdated = document.querySelector(".nav-cart-when-added");
 
 addToCart.onclick = function changeText() {
-    addToCart.innerHTML = "Added";
-    navCartUpdated.innerHTML = "CART (1)";
+    successMessage.style.display = "block";
 }

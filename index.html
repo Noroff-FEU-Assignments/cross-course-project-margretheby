@@ -30,7 +30,7 @@
                 <li><a href="jackets.html">JACKETS</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="cart.html">CART</a></li>
+                <li><a href="cart.html" class="nav-cart-when-added">Cart (<span>0</span>)</a></li>
             </ul>
         </nav>
         <div class="hamburger-menu">
@@ -42,7 +42,7 @@
                         <li><a href="jackets.html">Jackets</a></li>
                         <li><a href="about.html">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="cart.html" class="nav-cart-when-added">Cart (<span>0</span>)</a></li>
                         <li><a href="search.html">Search</a></li>
                     </ul>
                 </div>
@@ -68,27 +68,12 @@
         </section>
         <section class="best-sellers">
             <h2>OUR BEST SELLERS</h2>
-            <div class="popular-jackets">
-                <div class="jacket-card">
-                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="The hiker" class="jacket-card-main-page"><h3>The hiker</h3></a>
-                    
-                </div>
-                <div class="jacket-card">
-                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="The hiker" class="jacket-card-main-page"><h3>The hiker</h3></a>
-                    
-                </div>
-                <div class="jacket-card">
-                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="The hiker" class="jacket-card-main-page"><h3>The hiker</h3></a>
-                    
-                </div>
-                <div class="jacket-card">
-                    <a href="jackets-specific.html"><img src="images/resize-jacket-on-road.jpg" alt="The hiker" class="jacket-card-main-page"><h3>The hiker</h3></a>
-                </div>
-
+            <div class="popular-jackets all-jackets">
             </div>
             <a href="jackets.html" class="cta-button">VIEW MORE</a>
         </section>
     </main>
+    <button class="add-to-cart-button hidden"></button>
     <footer>
         <div class="copyright">
             <img src="images/footer-logo.jpg" alt="mountain logo rainydays" class="footer-logo">
@@ -129,5 +114,6 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/components/jackets.js"></script>
 </body>
 </html>
