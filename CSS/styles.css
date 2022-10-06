@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
+main, .search-section {
+  padding-top: 50px;
+}
+
 h1, h2, h3, .cta-button, header > nav {
   text-transform: uppercase;
   font-family: 'Oswald', "Lucida Sans Unicode", "Lucida Grande",
@@ -98,6 +102,8 @@ header {
   background-size: cover;
   margin: auto;
   padding: 0px;
+  position: fixed;
+  width: 100%;
 }
 
 header a {
@@ -147,10 +153,11 @@ header a:hover {
   display: none;
 }
 
-#search {
-  border-radius: 5px;
+#search, #search-page {
+  border-color: #0a3641;
+  border-radius: 10px;
   border-width: 1px;
-  border-color: #f3f3f3;
+  height: 20px;
 }
 
 #search, .header-search a {
@@ -569,13 +576,14 @@ form input, form textarea {
   margin: 0 auto;
   margin-bottom: 450px;
   background-color: #f3f3f3cc;
-  border-radius: 0px 70px 0px 70px;
+  border-radius: 0px 0px 0px 70px;
   max-width: fit-content;
   padding: 5px 10px 15px 10px;
 }
 
 .padding-contact {
   margin-bottom: 100px;
+  padding-top: 50px;
 }
 
 /* Contact page */

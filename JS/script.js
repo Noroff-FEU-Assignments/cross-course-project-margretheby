@@ -97,14 +97,7 @@ function setItems(product) {
         let productInCart = products[i].inCart;
 
        let cartItems = localStorage.getItem("productsInCart")
-        cartItems = JSON.parse(cartItems);
-    /*
-        if (cartItems != null) {
-            cartItems[productInCart] += 1;
-        } else {
-            productInCart = 1;
-        }*/
-    
+        cartItems = JSON.parse(cartItems);    
         cartItems = productTag;
 
         localStorage.setItem("productsInCart", JSON.stringify(cartItems))
@@ -155,6 +148,8 @@ function updateCart() {
         </div>`;
         } 
     } else {
+
+        // disableing purchase-button when cart is empty
             let purchaseButton = document.querySelector(".purchase").disabled = true;
         }
 }
