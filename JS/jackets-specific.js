@@ -23,4 +23,6 @@ const addToCart = document.querySelector(".add-to-cart-button");
 
 addToCart.onclick = function changeText() {
     successMessage.style.display = "block";
+    successMessage.style.color = "#dd4b00";
+    successMessage.style.margin = "20px";
 }

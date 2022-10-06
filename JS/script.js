@@ -52,7 +52,6 @@ function getProducts() {
         const productID = products[i].id;
         const productTag = products[i].tag;
         const productPrice = products[i].price;
-        console.log(productTag)
     }
 }
 
@@ -97,10 +96,6 @@ function setItems(product) {
         let productName = products[i].name;
         let productInCart = products[i].inCart;
 
-        console.log(productInCart);
-
-        
-
        let cartItems = localStorage.getItem("productsInCart")
         cartItems = JSON.parse(cartItems);
     /*
@@ -122,7 +117,6 @@ function updateCart() {
     cartItems = JSON.parse(cartItems);
 
     let productContainer = document.querySelector(".products-container");
-    console.log(cartItems);
     let emptyCart = document.querySelector(".empty-cart");
     if (cartItems && productContainer) {
 
