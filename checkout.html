@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Just one more step. Fill out and submit your order, and your jacket will be on its way.">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
+    <title>CHECKOUT | RAINYDAYS</title>
+    <!-- Hotjar Tracking Code for https://mb-rainydays.netlify.app/ -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:3158334,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-div">
+            <a href="index.html"><img src="images/header-logo.jpg" alt="mountain logo rainydays" class="header-logo"></a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="jackets.html">JACKETS</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="cart.html" class="nav-cart-when-added">Cart (<span>0</span>)</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu">
+                <label for="checkbox"><i class="fa-solid fa-bars"></i></label>
+                <input type="checkbox" id="checkbox" name="checkbox" class="visually-hidden">
+                <div class="hamburger-choices">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html" class="nav-cart-when-added">Cart (<span>0</span>)</a></li>
+                        <li><a href="search.html">Search</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="header-search">
+            <input type=text name="search" id="search">
+            <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div>
+                <h1>Checkout</h1>
+            </div>
+        </section>
+        <section class="checkout-layout">
+            <div class="checkout-heading">
+                <h3>Order summary</h3>
+            </div>
+                <div class="checkout-summary">
+                    <div class="cart-product-info">
+                        <div class="cart-jacket-image">
+                        <a href="hiker.html">
+                            <img src="images/carousel1.png" class="cart-image" alt="The Hiker">
+                        </a>
+                        </div>
+                        <div class="cart-jacket-info">
+                            <span>THE HIKER</span>
+                            <div class="color-section">
+                                <p class="color-cart">Color: </p>
+                                <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                            </div>
+                            <div class="size-section">
+                                <p class="size-cart">Size: </p>
+                                <div class="product-size-card">S</div>
+                            </div>
+                            <div class="size-section">
+                                <p class="color-cart">Amount: </p>
+                                <div class="product-size-card">
+                                    1
+                                </div>
+                            </div>
+                            <div class="cart-price">
+                                <h2>1.299 KR</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <form class="cart-checkout-form">
+                    <div class="checkout-first">
+                        <label for="firstname">First name</label>
+                        <input type="text" name="firstname" id="firstname">
+                        <div class="first-name-error">Your first name must contain at least 2 characters</div>
+                        <label for="lastname">Last name</label>
+                        <input type="text" name="lastname" id="lastname">
+                        <div class="last-name-error">Your last name must contain at least 2 characters</div>
+                        <label for="email">E-mail</label>
+                        <input type="text" name="email" id="email">
+                        <div class="email-error">Invalid e-mail address</div>
+                        <input type="checkbox" name="email-updates" id="email-updates">
+                        <label for="email-updates" id="email-updates-label">Keep me updated on the latest trends.</label>
+                    </div>
+                    <div class="checkout-second">
+                        <label for="address">Delivery address</label>
+                        <input type="text" name="address" id="address">
+                        <div class="address-error">Please enter your delivery address.</div>
+                        <label for="postcode">Post code</label>
+                        <input type="text" name="postcode" id="postcode">
+                        <div class="postcode-error">Your post code must contain at least 4 characters</div>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city">
+                        <div class="city-error">Your city is required.</div>
+                        <label for="cardnumber">Card number</label>
+                        <input type="text" name="cardnumber" id="cardnumber">
+                        <div class="cardnumber-error">Your card number must contain 16 characters</div>
+                    </div>
+                        <div>
+                            <div class="add-to-cart">
+                                <button class="cta-button checkout-padding">Check out</button>
+                            </div>
+                        </div>
+                    </form>
+        </section>
+        <button class="add-to-cart-button hidden"></button>
+    </main>
+    <footer>
+        <div class="copyright">
+            <img src="images/footer-logo.jpg" alt="mountain logo rainydays" class="footer-logo">
+            <p>Copyright &copy; 2022</p> 
+            <p>Margrethe By</p>
+        </div>
+        <div class="footer-links">
+            <section class="footer-shopping">
+                <h3>SHOPPING</h3>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="jackets.html">Jackets</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-info">
+                <h3>INFO & HELP</h3>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="footer-social">
+                <h3>SOCIAL</h3>
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="https://facebook.com">Facebook</a></li>
+                        <li><a href="https://instagram.com">Instagram</a></li>
+                        <li><a href="https://twitter.com">Twitter</a></li>
+                        <li><a href="https://snapchat.com">Snapchat</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </footer>
+    <script src="js/script.js" type="module"></script>
+    <script src="js/checkout.js"></script>
+</body>
+</html>
