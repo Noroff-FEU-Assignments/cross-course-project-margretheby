@@ -94,7 +94,8 @@ function validateCheckOut() {
             <div class="shop-more">
                 <a href="jackets.html" class="cta-button">Shop more</a>
             </div>
-        </section>`
+        </section>`;
+        localStorage.clear();
     }
 }
 
