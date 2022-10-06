@@ -64,6 +64,12 @@ a {
   border-color: #dd4b00;
 }
 
+.purchase:disabled {
+  background-color: #e5e4e4;
+  color: #616161;
+  border-color: #616161;
+}
+
 .btn-icons {
   background-color: #0a3641;
   border-radius: 50%;

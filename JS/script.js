@@ -153,8 +153,10 @@ function updateCart() {
                 <h2>${products[i].price} kr</h2>
             </div>
         </div>`;
+        } 
+    } else {
+            let purchaseButton = document.querySelector(".purchase").disabled = true;
         }
-    }
 }
 
 
