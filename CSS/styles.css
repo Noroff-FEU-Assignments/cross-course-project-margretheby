@@ -780,6 +780,7 @@ footer {
   .header-div {
     position: top;
     order: 2;
+    padding-right: 30px;
   }
 
   .hamburger-menu {
