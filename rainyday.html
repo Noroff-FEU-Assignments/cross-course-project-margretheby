@@ -100,19 +100,24 @@
                         </div>                    
                         <div class="product-size"><p>Size: </p></div>
                         <div class="product-size-cards">
-                            <div class="product-size-card">XS</div>
-                            <div class="product-size-card">S</div>
-                            <div class="product-size-card">M</div>
-                            <div class="product-size-card">L</div>
-                            <div class="product-size-card">XL</div>
+                            <select name="size" id="size">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
         <div class="add-to-cart">
-            <a href="#bottom" class="cta-button add-to-cart-button">Add to cart</a>
+            <a href="#bottom" data-id="${id.id}" class="cta-button add-to-cart-button">Add to cart</a>
         </div>
+        <div class="add-to-cart">
+            <h3 class="hidden">The product was added to <a href="cart.html">your cart <i class="btn-icons fa-solid fa-cart-shopping"></i></h3>
+        </a></div>
         <div>
             <h3 class="hidden">The product was added to your cart</h3>
         </div>

@@ -1,39 +1,112 @@
+let addToCartButton = document.querySelector(".add-to-cart-button");
+let cartId = addToCartButton.getAttribute("data-id");
+let cartNumberDisplay = document.querySelector(".cart_number");
+
+addToCartButton.addEventListener("click", () => {
+  addItemToCart(cartId);
+});
+
+function refreshCart() {
+  let productNumber = localStorage.getItem("addItemToCart");
+  if (productNumber) {
+    cartNumberDisplay.textContent = productNumber;
+  }
+}
+
+function addItemToCart(cartId) {
+  let productNumber = localStorage.getItem("addItemToCart");
+  productNumber = parseInt(productNumber);
+  if (productNumber) {
+    localStorage.setItem("addItemToCart", productNumber + 1);
+    cartNumberDisplay.textContent = productNumber + 1;
+  } else {
+    localStorage.setItem("addItemToCart", 1);
+    cartNumberDisplay.textContent = 1;
+  }
+  addItem(cartId);
+}
+function addItem(cartId) {
+  let cartItem = localStorage.getItem(cartId);
+  cartItem = parseInt(cartItem);
+  if (cartItem) {
+    localStorage.setItem(cartId, cartItem + 1);
+  } else {
+    localStorage.setItem(cartId, 1);
+  }
+}
+
+refreshCart();
 
 
-let products = [
-    {
-        id: 1,
-        name: "The hiker",
-        tag: "hiker",
-        price: 1299,
-        description: `Description of the jacket "The hiker" will appear here, giving the buyer information about this jackets specific features. Who need to get "The hiker", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 2,
-        name: "The skier",
-        tag: "skier",
-        price: 1599,
-        description: `Description of the jacket "The skier" will appear here, giving the buyer information about this jackets specific features. Who need to get "The skier", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 3,
-        name: "The rainyday",
-        tag: "rainyday",
-        price: 999,
-        description: `Description of the jacket "The rainyday" will appear here, giving the buyer information about this jackets specific features. Who need to get "The rainyday", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 4,
-        name: "The climber",
-        tag: "climber",
-        price: 1199,
-        description: `Description of the jacket "The climber" will appear here, giving the buyer information about this jackets specific features. Who need to get "The climber", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-];
+// EGEN KODE
+function setItems(product) {
+    let cartItems = localStorage.getItem("productsInCart")
+    let cartItem = JSON.parse(cartItems);
+    cartItem = idParam;
+    if(!cartItem) {
+        cartItem = [];
+    } else {
+        if (cartItem === "hiker") {
+            localStorage.setItem("productsInCart", JSON.stringify(hiker))
+            hiker.inCart++;
+        } else if (cartItem === "skier") {
+            localStorage.setItem("productsInCart", JSON.stringify(skier))
+            skier.inCart++;
+        } else if (cartItem === "rainyday") {
+            localStorage.setItem("productsInCart", JSON.stringify(rainyday))
+            rainyday.inCart++;
+        } else if (cartItem === "climber") {
+            localStorage.setItem("productsInCart", JSON.stringify(climber))
+            climber.inCart++;
+        } else {
+
+            localStorage.setItem("productsInCart", JSON.stringify([cartItem, cartItem]))
+            list = JSON.parse(localStorage.productsInCart)
+            list.push(cartItem)
+            localStorage.setItem("productsInCart", JSON.stringify(list))
+        }
+    }
+}
+
+// Adding the items to localStorage
+
+function setItems(product) {
+    for (let i = 0; i < products.length; i++) {
+        let cartItems = localStorage.getItem("productsInCart")
+        let cartItem = JSON.parse(cartItems);
+        cartItem = idParam;
+
+
+
+        if (cartItem === products[0].tag) {
+            localStorage.setItem("hikerInCart", JSON.stringify(products[0]));
+            totalCost(products[0]);
+
+        } else if (cartItem === products[1].tag) {
+            localStorage.setItem("skierInCart", JSON.stringify(products[1]));
+            totalCost(products[1]);
+        } else if (cartItem === products[2].tag) {
+            localStorage.setItem("rainydayInCart", JSON.stringify(products[2]));
+            totalCost(products[2]);
+        } else if (cartItem === products[3].tag) {
+            localStorage.setItem("climberInCart", JSON.stringify(products[3]));
+            totalCost(products[3]);
+        }
+    }
+}
+
+// Total price som jeg kanskje får bruk for
+    let hikerTotalPrice = hikerInCart.inCart * hiker.price;
+    let skierTotalPrice = skierInCart.inCart * skierInCart.price;
+    let rainydayTotalPrice = rainydayInCart.inCart * rainydayInCart.price;
+    let climberTotalPrice = (climberInCart.inCart * climberInCart.price);
+
+
+
+
+
+
+// HELE KODEN MIN
 
 
 // Getting each object in the array into its own variable
@@ -54,17 +127,6 @@ const urlParams = new URLSearchParams(window.location.search);
 const idParam = urlParams.get('id')
 
 
-
-// Getting HTML elements
-const addToCartButton = document.querySelector(".add-to-cart-button");
-const purchaseButton = document.querySelector(".purchase")
-
-
-
-// eventListener for the add to cart-button
-addToCartButton.addEventListener("click", () => {
-    cartNumbers(idParam);
-})
 
 
 
@@ -96,36 +158,38 @@ function cartNumbers(product) {
 // Adding the items to localStorage
 
 function setItems(product) {
-
+    for (let i = 0; i < products.length; i++) {
         let cartItems = localStorage.getItem("productsInCart")
         let cartItem = JSON.parse(cartItems);
         cartItem = idParam;
 
-        if (cartItem === "hiker") {
-            localStorage.setItem("hikerInCart", JSON.stringify(hiker));
-            hiker.inCart++;
-            totalCostHiker();
-        } else if (cartItem === "skier") {
-            localStorage.setItem("skierInCart", JSON.stringify(skier));
-            skier.inCart++;
-            totalCostSkier();
-        } else if (cartItem === "rainyday") {
-            localStorage.setItem("rainydayInCart", JSON.stringify(rainyday));
-            rainyday.inCart++;
-            totalCostRainyday();
-        } else if (cartItem === "climber") {
-            localStorage.setItem("climberInCart", JSON.stringify(climber));
-            climber.inCart++;
-            totalCostClimber();
+
+
+        if (cartItem === products[0].tag) {
+            localStorage.setItem("hikerInCart", JSON.stringify(products[0]));
+            totalCost(products[0]);
+
+        } else if (cartItem === products[1].tag) {
+            localStorage.setItem("skierInCart", JSON.stringify(products[1]));
+            totalCost(products[1]);
+        } else if (cartItem === products[2].tag) {
+            localStorage.setItem("rainydayInCart", JSON.stringify(products[2]));
+            totalCost(products[2]);
+        } else if (cartItem === products[3].tag) {
+            localStorage.setItem("climberInCart", JSON.stringify(products[3]));
+            totalCost(products[3]);
         }
+    }
 }
+
 
 
 // Updating the cart with localStorage
 function updateCart() {
     const productContainer = document.querySelector(".products-container");
-    let cartNumbers = localStorage.getItem("cartNumbers");
     const emptyCart = document.querySelector(".empty-cart");
+    let cartNumbers = localStorage.getItem("cartNumbers");
+
 
 
     let hikerInCart = localStorage.getItem("hikerInCart");
@@ -137,17 +201,12 @@ function updateCart() {
     let rainydayInCart = localStorage.getItem("rainydayInCart");
     rainydayInCart = JSON.parse(rainydayInCart);
 
-
-
-    
-
-
     if (!hikerInCart && !skierInCart && !climberInCart && !rainydayInCart){
-            purchaseButton.disabled = true;
+            const purchaseButton = document.querySelector(".purchase").disabled = true;
         } else { 
-            emptyCart.style.display = "none";
-
             if(hikerInCart) {
+                emptyCart.style.display = "none";
+                
                 productContainer.innerHTML += `
                 <div class="cart-layout">
                 <div class="cart-product-info">
@@ -165,7 +224,6 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                            Size:
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -173,7 +231,7 @@ function updateCart() {
                                 <option value="L">L</option>
                                 <option value="XL">XL</option>
                             </select>
-                        </div>
+                    </div>
                         </div>
                     </div>
                 </div>
@@ -181,22 +239,23 @@ function updateCart() {
                 <div class="size-card-cart">
                     <div class="product-size-card">
                     <select name="amount" id="amount">
-                        <option value="${hikerInCart.inCart}">${hikerInCart.inCart}</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </select>
+                    <option value="${cartNumbers}">${cartNumbers}</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
                     </div>
                 </div>
                 <div class="cart-price">
-                    <h2>${hikerInCart.inCart * hiker.price} kr</h2>
+                    <h2>${hiker.price} kr</h2>
                 </div>
-                </div>`;
+                </div><i class="btn-icons fa-solid fa-trash"></i>`;
             } 
 
             if(skierInCart) {
+                emptyCart.style.display = "none";
                     
                 productContainer.innerHTML += `
                 <div class="cart-layout">
@@ -214,7 +273,6 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                            Size: 
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -230,7 +288,7 @@ function updateCart() {
                     <div class="size-card-cart">
                         <div class="product-size-card">
                         <select name="amount" id="amount">
-                        <option value="${skierInCart.inCart}">${skierInCart.inCart}</option>
+                        <option value="${cartNumbers}">${cartNumbers}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -240,13 +298,14 @@ function updateCart() {
                         </div>
                     </div>
                     <div class="cart-price">
-                        <h2>${skierInCart.inCart * skierInCart.price} kr</h2>
+                        <h2>${skierInCart.price} kr</h2>
                     </div>
-                </div>`;
+                </div><i class="btn-icons fa-solid fa-trash"></i>`;
             }
 
 
             if(rainydayInCart) {
+                emptyCart.style.display = "none";
                 
                 productContainer.innerHTML += `
                 <div class="cart-layout">
@@ -266,7 +325,6 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                         Size: 
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -282,7 +340,7 @@ function updateCart() {
                 <div class="size-card-cart">
                     <div class="product-size-card">
                     <select name="amount" id="amount">
-                    <option value="${rainydayInCart.inCart}">${rainydayInCart.inCart}</option>
+                    <option value="${cartNumbers}">${cartNumbers}</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -292,12 +350,13 @@ function updateCart() {
                     </div>
                 </div>
                 <div class="cart-price">
-                    <h2>${rainydayInCart.inCart * rainydayInCart.price} kr</h2>
+                    <h2>${rainydayInCart.price} kr</h2>
                 </div>
-                </div>`;
+                </div><i class="btn-icons fa-solid fa-trash"></i>`;
             }
 
             if(climberInCart) {
+                emptyCart.style.display = "none";
                 
                 productContainer.innerHTML += `
                 <div class="cart-layout">
@@ -316,7 +375,6 @@ function updateCart() {
                             </div>
                             <div class="size-section">
                             <div class="product-size-cards">
-                                Size:
                                 <select name="size" id="size">
                                     <option value="XS">XS</option>
                                     <option value="S">S</option>
@@ -332,7 +390,7 @@ function updateCart() {
                     <div class="size-card-cart">
                         <div class="product-size-card">
                         <select name="amount" id="amount">
-                        <option value="${climberInCart.inCart}">${climberInCart.inCart}</option>
+                        <option value="${cartNumbers}">${cartNumbers}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -342,24 +400,22 @@ function updateCart() {
                         </div>
                     </div>
                     <div class="cart-price">
-                        <h2>${climberInCart.inCart * climberInCart.price} kr</h2>
+                        <h2>${climberInCart.price} kr</h2>
                     </div>
-                </div>`;
+                </div><i class="btn-icons fa-solid fa-trash"></i>`;
             }            
             const totalPrice = document.querySelector(".total-price");
-            totalPrice.innerHTML = `<div class="remove-items-cart"><h3>Empty cart </h3><i class="btn-icons fa-solid fa-trash"></i></div>`
+            totalPrice.innerHTML = `<h2>Total cost: ${localStorage.getItem("totalCost")}</h2>`
         }
     
 
 
 
     // Removing items from cart with localStorage
-    const removeButton = document.querySelector(".remove-items-cart");
-    if (removeButton) {
-        removeButton.addEventListener("click", () => {
-            removeItem();
-        })
-    }
+    const removeButton = document.querySelector(".fa-trash");
+    removeButton.addEventListener("click", () => {
+        removeItem();
+    })
 
     function removeItem () {
         localStorage.clear();
@@ -367,54 +423,22 @@ function updateCart() {
     } 
 }
 
-/*
-function totalCostHiker() {
-    
-    let cartCost = localStorage.getItem("totalCostHiker")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostHiker", cartCost + hiker.price);
-    } else {
-        localStorage.setItem("totalCostHiker", hiker.price);
-        cartCost = parseInt(cartCost)
-    }
-}
 
-function totalCostSkier() {
+function totalCost(product) {
     
-    let cartCost = localStorage.getItem("totalCostSkier")
+    let cartCost = localStorage.getItem("totalCost")
     cartCost = parseInt(cartCost)
     if (cartCost) {
-        localStorage.setItem("totalCostSkier", cartCost + skier.price);
+        localStorage.setItem("totalCost", cartCost + product.price);
+        console.log(cartCost);
     } else {
-        localStorage.setItem("totalCostSkier", skier.price);
+        localStorage.setItem("totalCost", product.price);
         cartCost = parseInt(cartCost)
     }
-}
 
-function totalCostRainyday() {
     
-    let cartCost = localStorage.getItem("totalCostRainyday")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostRainyday", cartCost + rainyday.price);
-    } else {
-        localStorage.setItem("totalCostRainyday", rainyday.price);
-        cartCost = parseInt(cartCost)
-    }
-}
 
-function totalCostClimber() {
-    
-    let cartCost = localStorage.getItem("totalCostClimber")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostClimber", cartCost + climber.price);
-    } else {
-        localStorage.setItem("totalCostClimber", climber.price);
-        cartCost = parseInt(cartCost)
-    }
-} */
+}
 
 refreshPageCartNumbers();
 updateCart();

@@ -128,3 +128,209 @@ function validateEmail(email) {
 function handleSubmitForm() {
     checkOutButtonSuccess.style.display = "block";
 }
+
+// Using localStorage in checkout summary
+
+function updateCartSummary () {
+    const cartSummary = document.querySelector(".checkout-summary")
+
+    let hikerInCart = localStorage.getItem("hikerInCart");
+    hikerInCart = JSON.parse(hikerInCart);
+    let skierInCart = localStorage.getItem("skierInCart");
+    skierInCart = JSON.parse(skierInCart);
+    let climberInCart = localStorage.getItem("climberInCart");
+    climberInCart = JSON.parse(climberInCart);
+    let rainydayInCart = localStorage.getItem("rainydayInCart");
+    rainydayInCart = JSON.parse(rainydayInCart);
+    
+
+
+    if(hikerInCart) {
+        cartSummary.innerHTML += `
+        <div class="cart-product-info">
+            <div class="cart-jacket-image">
+            <a href="${hikerInCart.tag}.html">
+                <img src="images/carousel1.png" class="cart-image" alt="${hikerInCart.name}">
+            </a>
+            </div>
+            <div class="cart-jacket-info">
+                <span>${hikerInCart.name}</span>
+                <div class="color-section">
+                    <p class="color-cart">Color: </p>
+                    <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                </div>
+                <div class="size-section">
+                    Size: <div class="product-size-cards">
+                    <select name="size" id="size">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    </div>
+                <div class="size-section">
+                    <p class="color-cart">Amount: </p>
+                    <div class="product-size-card">
+                    <div class="product-size-card">
+                    <select name="amount" id="amount">
+                        <option value="${hikerInCart.inCart}">${hikerInCart.inCart}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-price">
+                    <h2>${hikerInCart.price * hikerInCart.inCart} kr</h2>
+                </div>
+            </div>
+        </div>`
+    }
+    if (skierInCart) {
+        cartSummary.innerHTML += `
+        <div class="cart-product-info">
+            <div class="cart-jacket-image">
+            <a href="${skierInCart.tag}.html">
+                <img src="images/carousel1.png" class="cart-image" alt="${skierInCart.name}">
+            </a>
+            </div>
+            <div class="cart-jacket-info">
+                <span>${skierInCart.name}</span>
+                <div class="color-section">
+                    <p class="color-cart">Color: </p>
+                    <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                </div>
+                <div class="size-section">
+                    Size: <div class="product-size-cards">
+                    <select name="size" id="size">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    </div>
+                <div class="size-section">
+                    <p class="color-cart">Amount: </p>
+                    <div class="product-size-card">
+                    <div class="product-size-card">
+                    <select name="amount" id="amount">
+                        <option value="${skierInCart.inCart}">${skierInCart.inCart}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-price">
+                    <h2>${skierInCart.price * skierInCart.inCart} kr</h2>
+                </div>
+            </div>
+        </div>`
+
+    }
+    if (rainydayInCart) {
+        cartSummary.innerHTML += `
+        <div class="cart-product-info">
+            <div class="cart-jacket-image">
+            <a href="${rainydayInCart.tag}.html">
+                <img src="images/carousel1.png" class="cart-image" alt="${rainydayInCart.name}">
+            </a>
+            </div>
+            <div class="cart-jacket-info">
+                <span>${rainydayInCart.name}</span>
+                <div class="color-section">
+                    <p class="color-cart">Color: </p>
+                    <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                </div>
+                <div class="size-section">
+                    Size: <div class="product-size-cards">
+                    <select name="size" id="size">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    </div>
+                <div class="size-section">
+                    <p class="color-cart">Amount: </p>
+                    <div class="product-size-card">
+                    <div class="product-size-card">
+                    <select name="amount" id="amount">
+                        <option value="${rainydayInCart.inCart}">${rainydayInCart.inCart}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-price">
+                    <h2>${rainydayInCart.price * rainydayInCart.inCart} kr</h2>
+                </div>
+            </div>
+        </div>`
+
+    }
+
+    if (climberInCart) {
+        cartSummary.innerHTML += `
+        <div class="cart-product-info">
+            <div class="cart-jacket-image">
+            <a href="${climberInCart.tag}.html">
+                <img src="images/carousel1.png" class="cart-image" alt="${climberInCart.name}">
+            </a>
+            </div>
+            <div class="cart-jacket-info">
+                <span>${climberInCart.name}</span>
+                <div class="color-section">
+                    <p class="color-cart">Color: </p>
+                    <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                </div>
+                <div class="size-section">
+                    Size: <div class="product-size-cards">
+                    <select name="size" id="size">
+                        <option value="XS">XS</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                    </div>
+                <div class="size-section">
+                    <p class="color-cart">Amount: </p>
+                    <div class="product-size-card">
+                    <div class="product-size-card">
+                    <select name="amount" id="amount">
+                        <option value="${climberInCart.inCart}">${climberInCart.inCart}</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                    </div>
+                </div>
+                <div class="cart-price">
+                    <h2>${climberInCart.price * climberInCart.inCart} kr</h2>
+                </div>
+            </div>
+        </div>`
+    
+        
+    }
+
+}
+
+updateCartSummary();

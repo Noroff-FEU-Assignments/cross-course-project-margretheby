@@ -70,6 +70,7 @@ function validateForm() {
     if(submitForm) {
         handleSubmitForm();
         sendMessageButton.innerHTML = "Message sent";
+        form.reset();
     }
 }
 
