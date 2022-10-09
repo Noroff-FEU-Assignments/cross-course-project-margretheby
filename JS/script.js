@@ -165,7 +165,7 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                            Size:
+                            <p class="amount-mobile">Size:</p>
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -180,6 +180,7 @@ function updateCart() {
                 
                 <div class="size-card-cart">
                     <div class="product-size-card">
+                    <span class="hidden amount-mobile">Amount: </span>
                     <select name="amount" id="amount">
                         <option value="${hikerInCart.inCart}">${hikerInCart.inCart}</option>
                         <option value="1">1</option>
@@ -214,7 +215,7 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                            Size: 
+                            <p class="amount-mobile">Size:</p>
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -229,6 +230,7 @@ function updateCart() {
                     
                     <div class="size-card-cart">
                         <div class="product-size-card">
+                        <span class="hidden amount-mobile">Amount: </span>
                         <select name="amount" id="amount">
                         <option value="${skierInCart.inCart}">${skierInCart.inCart}</option>
                         <option value="1">1</option>
@@ -266,7 +268,7 @@ function updateCart() {
                         </div>
                         <div class="size-section">
                         <div class="product-size-cards">
-                         Size: 
+                            <p class="amount-mobile">Size:</p>
                             <select name="size" id="size">
                                 <option value="XS">XS</option>
                                 <option value="S">S</option>
@@ -281,6 +283,7 @@ function updateCart() {
                 
                 <div class="size-card-cart">
                     <div class="product-size-card">
+                    <span class="hidden amount-mobile">Amount: </span>
                     <select name="amount" id="amount">
                     <option value="${rainydayInCart.inCart}">${rainydayInCart.inCart}</option>
                     <option value="1">1</option>
@@ -316,7 +319,7 @@ function updateCart() {
                             </div>
                             <div class="size-section">
                             <div class="product-size-cards">
-                                Size:
+                                <p class="amount-mobile">Size:</p>
                                 <select name="size" id="size">
                                     <option value="XS">XS</option>
                                     <option value="S">S</option>
@@ -331,6 +334,7 @@ function updateCart() {
                     
                     <div class="size-card-cart">
                         <div class="product-size-card">
+                        <span class="hidden amount-mobile">Amount: </span>
                         <select name="amount" id="amount">
                         <option value="${climberInCart.inCart}">${climberInCart.inCart}</option>
                         <option value="1">1</option>

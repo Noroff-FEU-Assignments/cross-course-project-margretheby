@@ -254,7 +254,7 @@ header a:hover {
 /* Jackets page */
 
 .product-page-card,
-.product-info {
+.product-info, .product-size-cards {
   display: inline-block;
 }
 
@@ -469,6 +469,10 @@ h3 {
   cursor: pointer;
 }
 
+.product-size-cards p {
+  display: inline-block;
+}
+
 .cart-product-info, .size-card-cart, .cart-price, .color-section {
   display: flex;
   flex-wrap: wrap;
@@ -520,6 +524,7 @@ text-align: left;}
 .checkout-summary {
   background-color: #e5e4e4;
   border-radius: 0px 30px;
+  min-width: 250px
 }
 
 .cart-jacket-image {
@@ -748,9 +753,7 @@ footer {
   .header-image-checkout-success, 
   .header-search, 
   .main-nav, 
-  #checkbox, 
-  #cart-headings,
-  .size-card-cart {
+  #checkbox {
     display: none;
   }
   .contact-bg {
@@ -931,17 +934,28 @@ footer {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 723px) {
   .footer-shopping,
   .footer-social,
   .footer-info {
     display: block;
   }
 
+  .amount-mobile, #size {
+    display: inline-block;
+  }
+
+  #cart-headings {
+    display: none;
+  }
+
   .cart-layout {
     display: flex;
     flex-direction: column;
     margin: 0px 10px;
+    padding-top: 0px;
+    gap: 0px;
+    text-align: left;
   }
 
   .media-background {
@@ -970,7 +984,6 @@ footer {
 
   .cart-heading-price {
     order: 5;
-    margin: 0px;
   }
 
   .cart-price {

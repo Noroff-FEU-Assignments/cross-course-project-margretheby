@@ -160,7 +160,8 @@ function updateCartSummary () {
                     <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
                 </div>
                 <div class="size-section">
-                    Size: <div class="product-size-cards">
+                    <div class="product-size-cards">
+                    <p class="amount-mobile">Size:</p>
                     <select name="size" id="size">
                         <option value="XS">XS</option>
                         <option value="S">S</option>
@@ -205,7 +206,8 @@ function updateCartSummary () {
                     <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
                 </div>
                 <div class="size-section">
-                    Size: <div class="product-size-cards">
+                    <div class="product-size-cards">
+                    <p class="amount-mobile">Size:</p>
                     <select name="size" id="size">
                         <option value="XS">XS</option>
                         <option value="S">S</option>
@@ -251,7 +253,8 @@ function updateCartSummary () {
                     <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
                 </div>
                 <div class="size-section">
-                    Size: <div class="product-size-cards">
+                    <div class="product-size-cards">
+                    <p class="amount-mobile">Size:</p>
                     <select name="size" id="size">
                         <option value="XS">XS</option>
                         <option value="S">S</option>
@@ -298,7 +301,8 @@ function updateCartSummary () {
                     <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
                 </div>
                 <div class="size-section">
-                    Size: <div class="product-size-cards">
+                    <div class="product-size-cards">
+                    <p class="amount-mobile">Size:</p>
                     <select name="size" id="size">
                         <option value="XS">XS</option>
                         <option value="S">S</option>
