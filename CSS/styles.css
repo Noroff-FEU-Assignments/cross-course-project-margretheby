@@ -278,7 +278,7 @@ select {
   height: 25px;
   width: 60px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1em;
   text-align: center;
 }
 
