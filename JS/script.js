@@ -372,6 +372,7 @@ function updateCart() {
 }
 
 /*
+// Unfinished: calculate total cost
 function totalCostHiker() {
     
     let cartCost = localStorage.getItem("totalCostHiker")
@@ -419,6 +420,11 @@ function totalCostClimber() {
         cartCost = parseInt(cartCost)
     }
 } */
+
+
+
+
+// Calling functions
 
 refreshPageCartNumbers();
 updateCart();
