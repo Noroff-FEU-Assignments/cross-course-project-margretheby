@@ -218,8 +218,9 @@ header a:hover {
 
 .slogan-layout {
   display: flex;
+  justify-content: center;
   margin: 0 auto;
-  max-width: 370px;
+  max-width: 300px;
 }
 
 .fa-xmark {
