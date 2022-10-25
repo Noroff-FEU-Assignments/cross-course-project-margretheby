@@ -255,7 +255,7 @@ header a:hover {
 /* Jackets page */
 
 .product-page-card,
-.product-info, .product-size-cards {
+.product-info, .product-size-cards, .product-size {
   display: inline-block;
 }
 
@@ -303,7 +303,8 @@ h3 {
 }
 
 .jacket-page-card {
-  padding: 15px 10px;
+  padding: 15px 20px;
+  display: inline-block;
 }
 
 .jacket-page-card-img {
@@ -399,12 +400,17 @@ h3 {
   padding-top: 7px;
 }
 
-
+.add-to-cart-button {
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  max-width: 105px;
+  margin-top: 50px;
+}
 
 
 
 .available-colors, 
-.color-cards, 
 .product-size-cards, 
 .product-size, 
 .cart-jacket-image, 
@@ -429,10 +435,6 @@ h3 {
   text-align: left;
   padding: 0px 0px 70px 100px;
   vertical-align: top;
-}
-
-.product-size-card {
-  display: inline-block;
 }
 
 

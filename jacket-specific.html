@@ -7,7 +7,6 @@
     <meta name="description" content="The hiker is one of our most popular jackets. It is made to meet your needs in rough weather.">
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14580da1e1.js" crossorigin="anonymous"></script>
-    <script src="js/jackets-specific.js" defer></script>
     <title>THE HIKER | RAINYDAYS</title>
     <!-- Hotjar Tracking Code for https://mb-rainydays.netlify.app/ -->
     <script>
@@ -59,7 +58,8 @@
         </div>
         <section>
             <div>
-                <h1>The hiker</h1>
+                <h1 class="jacket-name"></h1>
+                <p class="loading">Loading</p>
             </div>
         </section>
         <div class="jacket-specific-layout">
@@ -85,30 +85,6 @@
                     </div>
                 </div>
                 <div class="specific-product-info">
-                    <p>Description of the jacket "The hiker" will appear here, giving the buyer information about this jackets specific features. Who need to get "The hiker", and detailed information about the most suitable use.</p>
-                    <h3>1.299 KR</h3>
-                    <div class="size-and-color-mobile">
-                        <div class="available-colors"><p>Available in: </p></div>
-                        <div class="color-cards">
-                            <div title="White" class="product-card-color" style="background-color: #ffffff;"></div>
-                            <div title="Yellow" class="product-card-color" style="background-color: #EBCD08;"></div>
-                            <div title="Light blue" class="product-card-color" style="background-color: #537c87;"></div>
-                            <div title="Orange" class="product-card-color" style="background-color: #DD4B00;"></div>
-                            <div title="Purple" class="product-card-color" style="background-color: #9008EB;"></div>
-                            <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
-                            <div title="Black" class="product-card-color" style="background-color: #000000;"></div>
-                        </div>                    
-                        <div class="product-size"><p>Size: </p></div>
-                        <div class="product-size-cards">
-                            <select name="size" id="size">
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                            </select>
-                        </div>
-                    </div>
                 </div>
             </section>
         </div>
@@ -158,6 +134,7 @@
             </section>
         </div>
     </footer>
+    <script src="js/jackets-specific.js"></script>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>

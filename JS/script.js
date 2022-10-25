@@ -1,58 +1,91 @@
 
+// API URL
+const url = "http://rainydays.maby.one/wp-json/wc/store/products";
 
-let products = [
-    {
-        id: 1,
-        name: "The hiker",
-        tag: "hiker",
-        price: 1299,
-        description: `Description of the jacket "The hiker" will appear here, giving the buyer information about this jackets specific features. Who need to get "The hiker", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 2,
-        name: "The skier",
-        tag: "skier",
-        price: 1599,
-        description: `Description of the jacket "The skier" will appear here, giving the buyer information about this jackets specific features. Who need to get "The skier", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 3,
-        name: "The rainyday",
-        tag: "rainyday",
-        price: 999,
-        description: `Description of the jacket "The rainyday" will appear here, giving the buyer information about this jackets specific features. Who need to get "The rainyday", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-    {
-        id: 4,
-        name: "The climber",
-        tag: "climber",
-        price: 1199,
-        description: `Description of the jacket "The climber" will appear here, giving the buyer information about this jackets specific features. Who need to get "The climber", and detailed information about the most suitable use.`,
-        inCart: 1
-    },
-];
+// Fetching all jackets from API
+async function fetchJackets() {
+    try {
+    
+    const response = await fetch(url);
+    const products = await response.json();
+
+    for (let i = 0; i < products.length; i++) {
+        const allJackets = document.querySelector(".all-jackets");
+        const loading = document.querySelector(".loading");
+        if (allJackets) {
+            if (loading) {
+                loading.innerHTML = "";
+            }
+            allJackets.innerHTML += `
+                <div class="jacket-page-card">
+                    <a href="jacket-specific.html?id=${products[i].id}">
+                        <img src="${products[i].images[0].src}" alt="${products[i].name}" class="jacket-page-card-img">
+                        <div class="color-cards">
+                            <div title="White" class="product-card-color" style="background-color: #ffffff;"></div>
+                            <div title="Yellow" class="product-card-color" style="background-color: #EBCD08;"></div>
+                            <div title="Light blue" class="product-card-color" style="background-color: #537c87;"></div>
+                            <div title="Orange" class="product-card-color" style="background-color: #DD4B00;"></div>
+                            <div title="Purple" class="product-card-color" style="background-color: #9008EB;"></div>
+                            <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                            <div title="Black" class="product-card-color" style="background-color: #000000;"></div>
+                        </div>
+                        <h3 class="heading-jacket">${products[i].name}</h3>
+                        <h3 class="product-card-price">${products[i].prices.regular_price} kr</h3>
+                    </a> 
+                </div>`;
+             }
+        }
+    } catch(error) {
+        console.log(error);
+        loading.innerHTML = "";
+        allJackets.innerHTML = `<p>Something went wrong.</p>`
+    } 
+}
+fetchJackets();
+
+// Display popular jackets on index.html
+const popularJackets = document.querySelector(".popular-jackets");
+
+async function fetchPopularJackets() {
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
+
+        const loading = document.querySelector(".loading");
+        for (let i = 0; i < 3; i++) {
+            loading.innerHTML = "";
+            popularJackets.innerHTML += `
+            <div class="jacket-page-card">
+                <a href="jacket-specific.html?id=${result[i].id}">
+                    <img src="${result[i].images[0].src}" alt="${result[i].name}" class="jacket-page-card-img">
+                    <div class="color-cards">
+                        <div title="White" class="product-card-color" style="background-color: #ffffff;"></div>
+                        <div title="Yellow" class="product-card-color" style="background-color: #EBCD08;"></div>
+                        <div title="Light blue" class="product-card-color" style="background-color: #537c87;"></div>
+                        <div title="Orange" class="product-card-color" style="background-color: #DD4B00;"></div>
+                        <div title="Purple" class="product-card-color" style="background-color: #9008EB;"></div>
+                        <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                        <div title="Black" class="product-card-color" style="background-color: #000000;"></div>
+                    </div>
+                    <h3 class="heading-jacket">${result[i].name}</h3>
+                    <h3 class="product-card-price">${result[i].prices.regular_price} kr</h3>
+                </a> 
+            </div>`
+        }
 
 
-// Getting each object in the array into its own variable
-let hiker = products.findIndex((products) => products.tag=="hiker");
-hiker = products[hiker];
+    } catch (error) {
+        console.log(error);
+        popularJackets.innerHTML = `<p>Something went wrong.</p>`
+    }
+}
+fetchPopularJackets();
 
-let skier = products.findIndex((products) => products.tag=="skier");
-skier = products[skier];
 
-let rainyday = products.findIndex((products) => products.tag=="rainyday");
-rainyday = products[rainyday];
-
-let climber = products.findIndex((products) => products.tag=="climber");
-climber = products[climber];
 
 // Getting params for adding to localStorage
 const urlParams = new URLSearchParams(window.location.search);
 const idParam = urlParams.get('id')
-
 
 
 // Getting HTML elements
@@ -103,21 +136,15 @@ function setItems(product) {
 
         if (cartItem === "hiker") {
             localStorage.setItem("hikerInCart", JSON.stringify(hiker));
-            hiker.inCart++;
-            totalCostHiker();
         } else if (cartItem === "skier") {
             localStorage.setItem("skierInCart", JSON.stringify(skier));
-            skier.inCart++;
-            totalCostSkier();
         } else if (cartItem === "rainyday") {
             localStorage.setItem("rainydayInCart", JSON.stringify(rainyday));
-            rainyday.inCart++;
-            totalCostRainyday();
         } else if (cartItem === "climber") {
             localStorage.setItem("climberInCart", JSON.stringify(climber));
-            climber.inCart++;
-            totalCostClimber();
-        }
+        }/*  else if (cartItem === 19) {
+            localStorage.setItem("lightweightInCart", JSON.stringify(lightweight));
+        } */
 }
 
 
@@ -136,6 +163,10 @@ function updateCart() {
     climberInCart = JSON.parse(climberInCart);
     let rainydayInCart = localStorage.getItem("rainydayInCart");
     rainydayInCart = JSON.parse(rainydayInCart);
+
+    /* let lightweightInCart = localStorage.getItem("lightweightInCart");
+    lightweightInCart = JSON.parse(lightweigtInCart); */
+
 
 
 
@@ -371,60 +402,7 @@ function updateCart() {
     } 
 }
 
-/*
-// Unfinished: calculate total cost
-function totalCostHiker() {
-    
-    let cartCost = localStorage.getItem("totalCostHiker")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostHiker", cartCost + hiker.price);
-    } else {
-        localStorage.setItem("totalCostHiker", hiker.price);
-        cartCost = parseInt(cartCost)
-    }
-}
-
-function totalCostSkier() {
-    
-    let cartCost = localStorage.getItem("totalCostSkier")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostSkier", cartCost + skier.price);
-    } else {
-        localStorage.setItem("totalCostSkier", skier.price);
-        cartCost = parseInt(cartCost)
-    }
-}
-
-function totalCostRainyday() {
-    
-    let cartCost = localStorage.getItem("totalCostRainyday")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostRainyday", cartCost + rainyday.price);
-    } else {
-        localStorage.setItem("totalCostRainyday", rainyday.price);
-        cartCost = parseInt(cartCost)
-    }
-}
-
-function totalCostClimber() {
-    
-    let cartCost = localStorage.getItem("totalCostClimber")
-    cartCost = parseInt(cartCost)
-    if (cartCost) {
-        localStorage.setItem("totalCostClimber", cartCost + climber.price);
-    } else {
-        localStorage.setItem("totalCostClimber", climber.price);
-        cartCost = parseInt(cartCost)
-    }
-} */
-
-
-
 
 // Calling functions
-
 refreshPageCartNumbers();
 updateCart();
