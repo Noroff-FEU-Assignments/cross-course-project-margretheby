@@ -34,7 +34,7 @@ async function fetchJackets() {
                     </a> 
                 </div>`;
              }
-        }
+        } 
     } catch(error) {
         console.log(error);
         loading.innerHTML = "";
@@ -45,6 +45,7 @@ fetchJackets();
 
 // Display popular jackets on index.html
 const popularJackets = document.querySelector(".popular-jackets");
+
 
 async function fetchPopularJackets() {
     try {
@@ -79,7 +80,7 @@ async function fetchPopularJackets() {
         popularJackets.innerHTML = `<p>Something went wrong.</p>`
     }
 }
-fetchPopularJackets();
+fetchPopularJackets(); 
 
 
 
@@ -96,8 +97,70 @@ const purchaseButton = document.querySelector(".purchase")
 
 // eventListener for the add to cart-button
 addToCartButton.addEventListener("click", () => {
-    cartNumbers(idParam);
+    cartNumbers();
+    setItems(); 
 })
+
+// Adding the items to localStorage
+
+function setItems() {
+    let cartItems = localStorage.setItem("productsInCart", idParam);
+    let cartItem = JSON.stringify(cartItems);
+    console.log(cartItems)
+
+    const productContainer = document.querySelector(".products-container")
+
+    if ("productsInCart" === 18) {
+        productContainer.innerHTML = `
+                <div class="cart-layout">
+                <div class="cart-product-info">
+                    <a href="jacket-specific.html?=${idParam}">
+                    <div class="cart-jacket-image">
+                        <img src="images/carousel1.png" class="cart-image" alt="The Hiker">
+                    </div>
+                    
+                    <div class="cart-jacket-info">
+                        <span>The Climber</span>
+                    </a>
+                        <div class="color-section">
+                            <p class="color-cart">Color: </p>
+                            <div title="Blue" class="product-card-color" style="background-color: #0043B8;"></div>
+                        </div>
+                        <div class="size-section">
+                        <div class="product-size-cards">
+                            <p class="amount-mobile">Size:</p>
+                            <select name="size" id="size">
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="size-card-cart">
+                    <div class="product-size-card">
+                    <span class="hidden amount-mobile">Amount: </span>
+                    <select name="amount" id="amount">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="cart-price">
+                    <h2>1199 kr</h2>
+                </div>
+                </div>`;
+            } 
+
+}
 
 
 
@@ -121,33 +184,10 @@ function cartNumbers(product) {
         localStorage.setItem("cartNumbers", 1);
         document.querySelector(".nav-cart-when-added span").textContent = 1;
     }
-
-    setItems(product);
 }
 
 
-// Adding the items to localStorage
-
-function setItems(product) {
-
-        let cartItems = localStorage.getItem("productsInCart")
-        let cartItem = JSON.parse(cartItems);
-        cartItem = idParam;
-
-        if (cartItem === "hiker") {
-            localStorage.setItem("hikerInCart", JSON.stringify(hiker));
-        } else if (cartItem === "skier") {
-            localStorage.setItem("skierInCart", JSON.stringify(skier));
-        } else if (cartItem === "rainyday") {
-            localStorage.setItem("rainydayInCart", JSON.stringify(rainyday));
-        } else if (cartItem === "climber") {
-            localStorage.setItem("climberInCart", JSON.stringify(climber));
-        }/*  else if (cartItem === 19) {
-            localStorage.setItem("lightweightInCart", JSON.stringify(lightweight));
-        } */
-}
-
-
+/*
 // Updating the cart with localStorage
 function updateCart() {
     const productContainer = document.querySelector(".products-container");
@@ -163,15 +203,8 @@ function updateCart() {
     climberInCart = JSON.parse(climberInCart);
     let rainydayInCart = localStorage.getItem("rainydayInCart");
     rainydayInCart = JSON.parse(rainydayInCart);
-
-    /* let lightweightInCart = localStorage.getItem("lightweightInCart");
-    lightweightInCart = JSON.parse(lightweigtInCart); */
-
-
-
-
-    
-
+    let lightweightInCart = localStorage.getItem("lightweightInCart");
+    lightweightInCart = JSON.parse(lightweigtInCart);
 
     if (!hikerInCart && !skierInCart && !climberInCart && !rainydayInCart){
             purchaseButton.disabled = true;
@@ -400,9 +433,7 @@ function updateCart() {
         localStorage.clear();
         window.location.reload();
     } 
-}
-
+} */
 
 // Calling functions
 refreshPageCartNumbers();
-updateCart();

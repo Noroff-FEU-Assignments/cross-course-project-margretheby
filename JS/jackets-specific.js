@@ -3,6 +3,7 @@ const successMessage = document.querySelector(".hidden");
 const addToCart = document.querySelector(".add-to-cart-button");
 const specificJacketInfo = document.querySelector(".specific-product-info");
 const jacketName = document.querySelector(".jacket-name");
+const imageSlides = document.querySelector(".image-slides");
 const loading = document.querySelector(".loading");
 
 const queryString = document.location.search;
@@ -10,8 +11,6 @@ const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
 const url = "http://rainydays.maby.one/wp-json/wc/store/products/" + id;
-
-console.log(url);
 
 // Displaying correct jackets
 async function fetchJacket() {
@@ -29,6 +28,18 @@ async function fetchJacket() {
 fetchJacket();
 
 function createHtml(jacketInfo) {
+    imageSlides.innerHTML = `<li class="jacket-carousel-slide" data-active>
+                                <img src="${jacketInfo.images[0].src}" alt="Jacket shown from the side" class="first-image-slide">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="images/carousel2.png" alt="Jacket shown from behind">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="Images/carousel3.png" alt="Jacket shown on someone skiing">
+                            </li>
+                            <li class="jacket-carousel-slide">
+                                <img src="images/carousel4.png" alt="Jacket's details on the arms and zipper">
+                            </li>`
     loading.innerHTML = "";
     jacketName.innerHTML = `${jacketInfo.name}`;
     specificJacketInfo.innerHTML = `

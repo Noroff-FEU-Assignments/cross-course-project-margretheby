@@ -343,6 +343,11 @@ h3 {
   position: absolute;
 }
 
+.first-image-slide {
+  border-radius: 0px 50px 0px 50px;
+  width: 196px;
+}
+
 .btn-left {
   left: -52px;
 } 

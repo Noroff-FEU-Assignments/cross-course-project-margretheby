@@ -440,5 +440,6 @@ function totalCost(product) {
 
 }
 
+
 refreshPageCartNumbers();
 updateCart();
