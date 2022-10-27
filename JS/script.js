@@ -164,6 +164,7 @@ function setItems() {
 
 
 
+
 // Preventing the cart-numbers to update on refresh
 function refreshPageCartNumbers() {
     let productNumbers = localStorage.getItem("cartNumbers");
