@@ -12,6 +12,7 @@ const id = params.get("id");
 
 const url = "https://rainydays.maby.one/wp-json/wc/store/products/" + id;
 
+
 // Displaying correct jackets
 async function fetchJacket() {
     try {
