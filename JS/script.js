@@ -1,6 +1,6 @@
 
 // API URL
-const url = "http://rainydays.maby.one/wp-json/wc/store/products";
+const url = "https://rainydays.maby.one/wp-json/wc/store/products";
 
 // Fetching all jackets from API
 async function fetchJackets() {
@@ -46,7 +46,7 @@ fetchJackets();
 // Display popular jackets on index.html
 const popularJackets = document.querySelector(".popular-jackets");
 
-
+if (popularJackets) {
 async function fetchPopularJackets() {
     try {
         const response = await fetch(url);
@@ -81,6 +81,7 @@ async function fetchPopularJackets() {
     }
 }
 fetchPopularJackets(); 
+}
 
 
 
@@ -96,10 +97,12 @@ const purchaseButton = document.querySelector(".purchase")
 
 
 // eventListener for the add to cart-button
-addToCartButton.addEventListener("click", () => {
-    cartNumbers();
-    setItems(); 
-})
+if (addToCartButton) {
+    addToCartButton.addEventListener("click", () => {
+        cartNumbers();
+        setItems(); 
+    })
+}
 
 // Adding the items to localStorage
 

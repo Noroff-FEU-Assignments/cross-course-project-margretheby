@@ -10,7 +10,7 @@ const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
 
-const url = "http://rainydays.maby.one/wp-json/wc/store/products/" + id;
+const url = "https://rainydays.maby.one/wp-json/wc/store/products/" + id;
 
 // Displaying correct jackets
 async function fetchJacket() {
