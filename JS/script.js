@@ -1,6 +1,6 @@
 
 // API URL
-const url = "https://rainydays.maby.one/wp-json/wc/store/products";
+const url = "https://rainydays.maby.one/wp-json/wc/store/products/";
 
 // Fetching all jackets from API
 async function fetchJackets() {
