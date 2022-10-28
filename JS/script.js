@@ -100,10 +100,10 @@ const purchaseButton = document.querySelector(".purchase")
 if (addToCartButton) {
     addToCartButton.addEventListener("click", () => {
         cartNumbers();
-        setItems(); 
     })
 }
 
+/*
 // Adding the items to localStorage
 
 function setItems() {
@@ -164,7 +164,7 @@ function setItems() {
             } 
 
 }
-
+*/
 
 
 
