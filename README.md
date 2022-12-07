@@ -24,4 +24,4 @@ Blabla
 ## Contact
 - <a href="https://www.linkedin.com/in/margrethe-by-6abb98226/">My LinkedIn page</a>
 - <a href="https://github.com/margretheby">My GitHub</a>
-- E-mail: <a href="mailto:margrethe.developer@gmail.com">margrethe.developer@gmail.com</a>
+- <a href="mailto:margrethe.developer@gmail.com">margrethe.developer@gmail.com</a>
