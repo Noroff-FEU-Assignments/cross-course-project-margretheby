@@ -1,6 +1,6 @@
 # Cross Course Project - Rainydays
 
-<!-- ADD IMAGE HERE -->
+<img src="https://github.com/Noroff-FEU-Assignments/cross-course-project-margretheby/blob/main/rainydays-screen.jpg" alt="Screenshot of the Rainydays website on desktop">
 This website is a project I have been working on during the frontend course at Noroff School of techonology and digital media. This is the first website I designed and coded, and it has gradually improved due to the progression of the course. 
 
 ## Description
