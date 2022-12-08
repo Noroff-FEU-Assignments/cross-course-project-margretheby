@@ -6,7 +6,7 @@ This website is a project I have been working on during the frontend course at N
 ## Description
 For this assignment I chose a brief about a company called Rainydays, which sell rain coats. Their tagline is "Pushing the comfort zone", and apart from that I was free to chose everything from design, to images and copy text.
 
-Link til site: https://mb-rainydays.netlify.app/
+Link to the site: https://mb-rainydays.netlify.app/
 
 ## Built with
 - HTML
