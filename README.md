@@ -1,7 +1,7 @@
 # Cross Course Project - Rainydays
 
 <img src="https://github.com/Noroff-FEU-Assignments/cross-course-project-margretheby/blob/main/rainydays-screen.jpg" alt="Screenshot of the Rainydays website on desktop">
-This website is a project I have been working on during the frontend course at Noroff School of techonology and digital media. This is the first website I designed and coded, and it has gradually improved due to the progression of the course. 
+This website is a project I have been working on during the frontend course at Noroff School of techonology and digital media. This is the first website I designed and coded, and it has gradually improved due to the progression of the course. It is still a work in progress.
 
 ## Description
 For this assignment I chose a brief about a company called Rainydays, which sell rain coats. Their tagline is "Pushing the comfort zone", and apart from that I was free to chose everything from design, to images and copy text.
